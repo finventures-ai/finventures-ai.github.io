@@ -147,4 +147,4 @@ Kit gagne sur la marge du plan gratuit ; MailerLite gagne sur les outils gratuit
 
 Voir aussi : [Les meilleurs outils courriel gratuits en 2026](/fr/guides/meilleurs-outils-courriel-gratuits-2026/).
 
-*Fin Ventures AI · 672, rue Augustin-Quintal, Boucherville (Québec) Canada. Dernière vérification : 5 novembre 2026.*
+*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir. Dernière vérification : 5 novembre 2026.*

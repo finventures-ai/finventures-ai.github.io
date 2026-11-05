@@ -153,4 +153,4 @@ Systeme.io is the rare tool where the free plan is not a teaser. For a soloprene
 
 [Start with the free Systeme.io plan](https://finventures-ai.github.io/go/systemeio/)
 
-*Fin Ventures AI · 672 Augustin-Quintal, Boucherville QC, Canada. Last checked: November 5, 2026.*
+*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · mailing address: PO box coming soon. Last checked: November 5, 2026.*

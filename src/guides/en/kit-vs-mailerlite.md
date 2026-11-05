@@ -147,4 +147,4 @@ Kit wins on free-plan headroom; MailerLite wins on documented free tooling and a
 
 See also: [Best free email marketing tools in 2026](/en/guides/best-free-email-marketing-tools-2026/).
 
-*Fin Ventures AI · 672 Augustin-Quintal, Boucherville QC, Canada. Last checked: November 5, 2026.*
+*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · mailing address: PO box coming soon. Last checked: November 5, 2026.*

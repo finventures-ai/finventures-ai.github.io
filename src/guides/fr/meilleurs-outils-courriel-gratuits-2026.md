@@ -148,4 +148,4 @@ Kit vous fait passer au palier suivant ; MailerLite bloque les envois au-delà d
 **Un outil gratuit suffit-il pour gagner de l'argent ?**
 Pour commencer, oui : ces limites suffisent pour un aimant, une séquence de bienvenue et une infolettre hebdomadaire. Passez au payant quand une limite bloque vos revenus.
 
-*Fin Ventures AI · 672, rue Augustin-Quintal, Boucherville (Québec) Canada. Dernière vérification : 5 novembre 2026.*
+*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir. Dernière vérification : 5 novembre 2026.*

@@ -16,7 +16,7 @@ Pierre, Fin Ventures AI
 
 ---
 *Vous recevez ce courriel parce que vous avez demandé le guide FUNNELS sur finventures-ai.github.io.*
-**Fin Ventures AI** (Pierre Bernier, propriétaire) · 672, rue Augustin-Quintal, Boucherville (Québec) Canada · fin.ventures.ai@gmail.com
+**Fin Ventures AI** (Pierre Bernier, propriétaire) · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir · fin.ventures.ai@gmail.com
 Divulgation : certains liens sont des liens d'affiliation ; nous pouvons recevoir une commission, sans coût pour vous.
 [Se désabonner en un clic]({{LIEN_DESABONNEMENT}}) — traité sans délai (au plus tard en 10 jours ouvrables, LCAP).
 
@@ -34,7 +34,7 @@ Pierre
 
 ---
 *Vous recevez ce courriel parce que vous avez demandé le guide FUNNELS sur finventures-ai.github.io.*
-**Fin Ventures AI** (Pierre Bernier, propriétaire) · 672, rue Augustin-Quintal, Boucherville (Québec) Canada · fin.ventures.ai@gmail.com
+**Fin Ventures AI** (Pierre Bernier, propriétaire) · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir · fin.ventures.ai@gmail.com
 Divulgation : certains liens sont des liens d'affiliation ; nous pouvons recevoir une commission, sans coût pour vous.
 [Se désabonner en un clic]({{LIEN_DESABONNEMENT}}) — traité sans délai (au plus tard en 10 jours ouvrables, LCAP).
 
@@ -58,7 +58,7 @@ Pierre
 
 ---
 *Vous recevez ce courriel parce que vous avez demandé le guide FUNNELS sur finventures-ai.github.io.*
-**Fin Ventures AI** (Pierre Bernier, propriétaire) · 672, rue Augustin-Quintal, Boucherville (Québec) Canada · fin.ventures.ai@gmail.com
+**Fin Ventures AI** (Pierre Bernier, propriétaire) · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir · fin.ventures.ai@gmail.com
 Divulgation : certains liens sont des liens d'affiliation ; nous pouvons recevoir une commission, sans coût pour vous.
 [Se désabonner en un clic]({{LIEN_DESABONNEMENT}}) — traité sans délai (au plus tard en 10 jours ouvrables, LCAP).
 
@@ -78,7 +78,7 @@ Pierre
 
 ---
 *Vous recevez ce courriel parce que vous avez demandé le guide FUNNELS sur finventures-ai.github.io.*
-**Fin Ventures AI** (Pierre Bernier, propriétaire) · 672, rue Augustin-Quintal, Boucherville (Québec) Canada · fin.ventures.ai@gmail.com
+**Fin Ventures AI** (Pierre Bernier, propriétaire) · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir · fin.ventures.ai@gmail.com
 Divulgation : certains liens sont des liens d'affiliation ; nous pouvons recevoir une commission, sans coût pour vous.
 [Se désabonner en un clic]({{LIEN_DESABONNEMENT}}) — traité sans délai (au plus tard en 10 jours ouvrables, LCAP).
 
@@ -96,7 +96,7 @@ Pierre
 
 ---
 *Vous recevez ce courriel parce que vous avez demandé le guide FUNNELS sur finventures-ai.github.io.*
-**Fin Ventures AI** (Pierre Bernier, propriétaire) · 672, rue Augustin-Quintal, Boucherville (Québec) Canada · fin.ventures.ai@gmail.com
+**Fin Ventures AI** (Pierre Bernier, propriétaire) · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir · fin.ventures.ai@gmail.com
 Divulgation : certains liens sont des liens d'affiliation ; nous pouvons recevoir une commission, sans coût pour vous.
 [Se désabonner en un clic]({{LIEN_DESABONNEMENT}}) — traité sans délai (au plus tard en 10 jours ouvrables, LCAP).
 

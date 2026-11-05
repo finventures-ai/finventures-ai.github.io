@@ -147,4 +147,4 @@ Start where the cost of being wrong is zero. For most beginners that is Systeme.
 
 Related: [Systeme.io review](/en/guides/systeme-io-review/).
 
-*Fin Ventures AI · 672 Augustin-Quintal, Boucherville QC, Canada. Last checked: November 5, 2026.*
+*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · mailing address: PO box coming soon. Last checked: November 5, 2026.*

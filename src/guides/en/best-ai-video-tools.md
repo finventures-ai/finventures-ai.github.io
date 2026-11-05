@@ -143,4 +143,4 @@ Not to start. HeyGen and Synthesia include AI voices. Add ElevenLabs if voice qu
 **Can I monetize videos made with AI avatars?**
 That depends on each platform's monetization rules and on the tool's licence terms, which we have not reviewed for this article — check both before monetizing.
 
-*Fin Ventures AI · 672 Augustin-Quintal, Boucherville QC, Canada. Last checked: November 5, 2026.*
+*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · mailing address: PO box coming soon. Last checked: November 5, 2026.*

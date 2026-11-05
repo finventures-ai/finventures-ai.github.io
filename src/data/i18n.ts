@@ -5,7 +5,7 @@ export const site = {
   domain: 'fin.ventures.ai',
   owner: 'Pierre Bernier',
   /** Placeholder until mailing address provided */
-  mailingAddress: '672 Augustin-Quintal, Boucherville, QC, Canada',
+  mailingAddress: 'Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir',
   email: 'fin.ventures.ai@gmail.com',
 };
 
