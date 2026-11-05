@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { t, labelText, publicPlanName, publicNote} from '../../../data/i18n';
+import { tools, getTool } from '../../../data/tools';
+
+export function getStaticPaths() {
+  return tools.map((tool) => ({ params: { slug: tool.slug } }));
+}
+
+const lang = 'en' as const;
+const copy = t[lang];
+const tool = getTool(Astro.params.slug!)!;
+const pathWithoutLang = `/pricing/${tool.slug}/`;
+const title = `${copy.pricing}: ${tool.name[lang]}`;
+---
+<BaseLayout lang={lang} title={title} description={`${tool.name[lang]} ${copy.pricing}`} pathWithoutLang={pathWithoutLang}>
+  <section class="hero">
+    <p class="muted small">
+      <a href={`/${lang}/review/${tool.slug}/`} >{tool.name[lang]}</a> / {copy.pricing}
+    </p>
+    <h1>{tool.name[lang]} — {copy.pricing}</h1>
+    <p class="lead">{tool.tagline[lang]}</p>
+    <p>
+      <a class="cta" href={`/go/${tool.brand}/`} >{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
+      <a class="cta secondary" href={tool.pricingUrl} rel="noopener noreferrer" target="_blank">{lang === 'fr' ? 'Tarifs officiels' : 'Official pricing'}</a>
+    </p>
+  </section>
+
+  <article class="card">
+    <h2>{copy.plans}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>{lang === 'fr' ? 'Forfait' : 'Plan'}</th>
+          <th>USD / {lang === 'fr' ? 'mois' : 'mo'}</th>
+          <th>{lang === 'fr' ? 'Note' : 'Note'}</th>
+          <th>{copy.label}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tool.plans.map((p) => (
+          <tr>
+            <td>{publicPlanName(p.name, lang)}</td>
+            <td>{p.priceMonthlyUsd == null ? copy.na : p.priceMonthlyUsd === 0 ? (lang === 'fr' ? 'Gratuit' : 'Free') : `$${p.priceMonthlyUsd}`}</td>
+            <td>{publicNote(p.note, lang)}</td>
+            <td><span class={`badge ${p.label}`} >{labelText(p.label, lang)}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="muted small">{lang === 'fr' ? 'Les prix évoluent — vérifier la page officielle avant achat.' : 'Prices change — verify the official page before buying.'}</p>
+  </article>
+
+  <article class="card">
+    <h2>{copy.commission}</h2>
+    <p><span class={`badge ${tool.commission.label}`} >{labelText(tool.commission.label, lang)}</span> {tool.commission.summary[lang]}</p>
+    <p class="small muted">{tool.commission.detail}</p>
+  </article>
+</BaseLayout>

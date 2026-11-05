@@ -1,0 +1,19 @@
+---
+import { site, t, otherLang, type Lang } from '../data/i18n';
+interface Props { lang: Lang; pathWithoutLang?: string; }
+const { lang, pathWithoutLang = '/' } = Astro.props;
+const copy = t[lang];
+const alt = otherLang(lang);
+const altPath = `/${alt}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+---
+<header class="site-header">
+  <div class="wrap inner">
+    <a class="brand" href={`/${lang}/`}>{site.name}</a>
+    <nav class="nav" aria-label="Main">
+      <a href={`/${lang}/category/email/`}>{lang === 'fr' ? 'Courriel' : 'Email'}</a>
+      <a href={`/${lang}/category/funnels/`}>{lang === 'fr' ? 'Tunnels' : 'Funnels'}</a>
+      <a href={`/${lang}/category/ai/`}>{lang === 'fr' ? 'IA' : 'AI'}</a>
+      <a href={altPath}>{copy.langSwitch}</a>
+    </nav>
+  </div>
+</header>

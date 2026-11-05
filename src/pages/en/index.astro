@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EmailCapture from '../../components/EmailCapture.astro';
+import { t } from '../../data/i18n';
+import { categories, tools, comparisonPairs } from '../../data/tools';
+const lang = 'en' as const;
+const copy = t[lang];
+const pairCount = comparisonPairs().length;
+---
+<BaseLayout lang={lang} title={copy.homeTitle} description={copy.homeDesc} pathWithoutLang="/">
+  <section class="hero">
+    <h1>{copy.homeTitle}</h1>
+    <p class="lead">{copy.homeLead}</p>
+    <p class="muted small">{tools.length} {lang === 'fr' ? 'outils' : 'tools'} · {pairCount} {copy.comparisons.toLowerCase()} · FR/EN</p>
+  </section>
+
+  <h2>{copy.doorsHeading}</h2>
+  <div class="doors">
+    {categories.map((c) => (
+      <a class="door" href={`/${lang}/category/${c.id}/`} >
+        <h2>{c[lang]}</h2>
+        <p>{c.magnet[lang]}</p>
+      </a>
+    ))}
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>{copy.allReviews}</h3>
+      <ul class="clean">
+        {tools.map((tool) => (
+          <li>
+            <a href={`/${lang}/review/${tool.slug}/`} >{tool.name[lang]}</a>
+            {' · '}
+            <a href={`/${lang}/pricing/${tool.slug}/`} >{copy.pricing}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div class="card">
+      <h3>{copy.comparisons}</h3>
+      <p class="muted small">
+        {lang === 'fr'
+          ? 'Pages X vs Y générées automatiquement par catégorie (même niche).'
+          : 'X vs Y pages auto-generated within each niche.'}
+      </p>
+      <ul class="clean">
+        {categories.map((c) => (
+          <li>
+            <a href={`/${lang}/category/${c.id}/#comparisons`} >{c[lang]} — {comparisonPairs(c.id).length} vs</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <EmailCapture lang={lang} />
+</BaseLayout>

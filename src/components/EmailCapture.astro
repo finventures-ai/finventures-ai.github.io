@@ -1,0 +1,22 @@
+---
+import { t, type Lang } from '../data/i18n';
+import type { Category } from '../data/tools';
+import { categories } from '../data/tools';
+interface Props { lang: Lang; category?: Category; }
+const { lang, category } = Astro.props;
+const copy = t[lang];
+const magnet = category
+  ? categories.find((c) => c.id === category)?.magnet[lang]
+  : lang === 'fr'
+    ? 'Guide mix B (Courriel · Tunnels · IA)'
+    : 'Mix B guide (Email · Funnels · AI)';
+---
+<section class="capture" id="magnet">
+  <h2>{copy.emailCaptureTitle}</h2>
+  <p class="muted small">{magnet}</p>
+  <p class="muted small">{copy.emailCaptureHint}</p>
+  <form onsubmit="return false;" aria-disabled="true">
+    <input type="email" name="email" placeholder={copy.emailPlaceholder} disabled />
+    <button type="button" disabled>{copy.emailSubmit}</button>
+  </form>
+</section>

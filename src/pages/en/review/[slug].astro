@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import EmailCapture from '../../../components/EmailCapture.astro';
+import { t, labelText} from '../../../data/i18n';
+import { tools, toolsByCategory, getTool, pairSlug } from '../../../data/tools';
+
+export function getStaticPaths() {
+  return tools.map((tool) => ({ params: { slug: tool.slug } }));
+}
+
+const lang = 'en' as const;
+const copy = t[lang];
+const tool = getTool(Astro.params.slug!)!;
+const alts = toolsByCategory(tool.category).filter((x) => x.slug !== tool.slug).slice(0, 5);
+
+function orderedPairSlug(x: typeof tool, y: typeof tool) {
+  const xi = tools.findIndex((t) => t.slug === x.slug);
+  const yi = tools.findIndex((t) => t.slug === y.slug);
+  return xi < yi ? pairSlug(x, y) : pairSlug(y, x);
+}
+
+const pathWithoutLang = `/review/${tool.slug}/`;
+const title = `${copy.review}: ${tool.name[lang]}`;
+---
+<BaseLayout lang={lang} title={title} description={tool.tagline[lang]} pathWithoutLang={pathWithoutLang}>
+  <section class="hero">
+    <p class="muted small">
+      <a href={`/${lang}/`}>{lang === 'fr' ? 'Accueil' : 'Home'}</a> /
+      <a href={`/${lang}/category/${tool.category}/`} >{tool.category}</a> /
+      {tool.name[lang]}
+    </p>
+    <h1>{tool.name[lang]} — {copy.review}</h1>
+    <p class="lead">{tool.tagline[lang]}</p>
+    <p>
+      <a class="cta" href={`/go/${tool.brand}/`} >{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
+      <a class="cta secondary" href={`/${lang}/pricing/${tool.slug}/`} >{copy.pricing}</a>
+      <a class="cta secondary" href={tool.website} rel="noopener noreferrer" target="_blank">{lang === 'fr' ? 'Site officiel' : 'Official site'}</a>
+    </p>
+  </section>
+
+  <article class="card">
+    <h2>{copy.verdict}</h2>
+    <p>{copy.verdictBody}</p>
+    <p><span class={`badge ${tool.commission.label}`} >{labelText(tool.commission.label, lang)}</span> {copy.commission}: {tool.commission.summary[lang]}</p>
+    <ul class="clean">
+      <li>{copy.cookie}: {tool.commission.cookieDays != null ? `${tool.commission.cookieDays} ${copy.days}` : copy.lifetime}</li>
+      <li>{copy.payoutMin}: {tool.commission.payoutMinUsd != null ? `$${tool.commission.payoutMinUsd}` : copy.na}</li>
+      <li>{copy.source}: <a href={tool.commission.source} rel="noopener noreferrer" target="_blank">{tool.commission.source}</a></li>
+    </ul>
+    {tool.flags && tool.flags.length > 0 && (
+      <div>
+        <h3>{copy.flags}</h3>
+        <ul class="clean">{tool.flags.map((f) => <li>{f}</li>)}</ul>
+      </div>
+    )}
+  </article>
+
+  <article class="card">
+    <h2>{copy.features}</h2>
+    <table>
+      <thead><tr><th>{lang === 'fr' ? 'Critère' : 'Criterion'}</th><th>{lang === 'fr' ? 'Valeur' : 'Value'}</th><th>{copy.label}</th></tr></thead>
+      <tbody>
+        {tool.features.map((f) => (
+          <tr>
+            <td>{f[lang]}</td>
+            <td>{String(f.value)}</td>
+            <td><span class={`badge ${f.label}`} >{labelText(f.label, lang)}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </article>
+
+  <article class="card">
+    <h2>{copy.alternatives}</h2>
+    <ul class="clean">
+      {alts.map((a) => (
+        <li>
+          <a href={`/${lang}/review/${a.slug}/`} >{a.name[lang]}</a>
+          {' · '}
+          <a href={`/${lang}/vs/${orderedPairSlug(tool, a)}/`} >vs</a>
+        </li>
+      ))}
+    </ul>
+  </article>
+
+  <EmailCapture lang={lang} category={tool.category} />
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import { tools } from '../../data/tools';
+import { site, t } from '../../data/i18n';
+import { siteConfig } from '../../data/siteConfig';
+
+export function getStaticPaths() {
+  const brands = Array.from(new Set(tools.map((x) => x.brand)));
+  return brands.map((brand) => ({ params: { brand } }));
+}
+
+const brand = Astro.params.brand!;
+const tool = tools.find((x) => x.brand === brand)!;
+/** Affiliate when approved; otherwise official vendor page. */
+const target = tool.goUrl ?? tool.website;
+const copy = t.fr;
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {siteConfig.noindex && <meta name="robots" content="noindex,nofollow" />}
+    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <link rel="canonical" href={target} />
+    <title>{tool.name.fr} — {site.name}</title>
+    <script define:vars={{ target }}>
+      location.replace(target);
+    </script>
+  </head>
+  <body style="font-family:system-ui,sans-serif;background:#0b1220;color:#e8eefc;max-width:640px;margin:3rem auto;padding:0 1rem;line-height:1.5">
+    <p>{copy.goPendingBody}</p>
+    <p><a href={target} rel="noopener noreferrer" style="color:#5b8cff">{tool.name.fr} — site officiel</a></p>
+    <p style="font-size:0.85rem;color:#9aa8c7;margin-top:1.5rem">{copy.disclosure}</p>
+  </body>
+</html>

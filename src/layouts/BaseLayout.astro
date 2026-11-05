@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Disclosure from '../components/Disclosure.astro';
+import { site, type Lang } from '../data/i18n';
+import { siteConfig } from '../data/siteConfig';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  pathWithoutLang?: string;
+  noindex?: boolean;
+}
+const { lang, title, description, pathWithoutLang = '/', noindex = siteConfig.noindex } = Astro.props;
+const canonical = new URL(`/${lang}${pathWithoutLang === '/' ? '/' : pathWithoutLang}`, Astro.site);
+const alt = lang === 'fr' ? 'en' : 'fr';
+const altUrl = new URL(`/${alt}${pathWithoutLang === '/' ? '/' : pathWithoutLang}`, Astro.site);
+const fullTitle = `${title} | ${site.name}`;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={site.owner} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang={lang} href={canonical} />
+    <link rel="alternate" hreflang={alt} href={altUrl} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/fr/', Astro.site)} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={site.name} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <Header lang={lang} pathWithoutLang={pathWithoutLang} />
+    <main class="wrap">
+      <Disclosure lang={lang} />
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>

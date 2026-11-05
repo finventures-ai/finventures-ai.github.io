@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import EmailCapture from '../../../components/EmailCapture.astro';
+import { t, labelText} from '../../../data/i18n';
+import {
+  categories,
+  toolsByCategory,
+  comparisonPairs,
+  pairSlug,
+  type Category,
+} from '../../../data/tools';
+
+export function getStaticPaths() {
+  return categories.map((c) => ({ params: { id: c.id } }));
+}
+
+const lang = 'fr' as const;
+const copy = t[lang];
+const id = Astro.params.id as Category;
+const cat = categories.find((c) => c.id === id)!;
+const list = toolsByCategory(id);
+const pairs = comparisonPairs(id);
+const title = cat[lang];
+const pathWithoutLang = `/category/${id}/`;
+---
+<BaseLayout
+  lang={lang}
+  title={title}
+  description={`${title} — ${list.length} ${lang === 'fr' ? 'avis' : 'reviews'}, ${pairs.length} ${copy.comparisons.toLowerCase()}`}
+  pathWithoutLang={pathWithoutLang}
+>
+  <section class="hero">
+    <p class="muted small"><a href={`/${lang}/`}>{lang === 'fr' ? 'Accueil' : 'Home'}</a> / {title}</p>
+    <h1>{title}</h1>
+    <p class="lead">{cat.magnet[lang]}</p>
+  </section>
+
+  <h2>{copy.categoryTools}</h2>
+  <div class="grid2">
+    {list.map((tool) => (
+      <article class="card">
+        <h3><a href={`/${lang}/review/${tool.slug}/`} >{tool.name[lang]}</a></h3>
+        <p class="muted">{tool.tagline[lang]}</p>
+        <p>
+          <span class={`badge ${tool.commission.label}`} >{labelText(tool.commission.label, lang)}</span>
+          {' '}{tool.commission.summary[lang]}
+        </p>
+        <p>
+          <a class="cta" href={`/go/${tool.brand}/`} >{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
+          {' '}
+          <a class="cta secondary" href={`/${lang}/pricing/${tool.slug}/`} >{copy.pricing}</a>
+        </p>
+      </article>
+    ))}
+  </div>
+
+  <h2 id="comparisons">{copy.comparisons}</h2>
+  <ul class="clean">
+    {pairs.map(({ a, b }) => (
+      <li>
+        <a href={`/${lang}/vs/${pairSlug(a, b)}/`} >
+          {a.name[lang]} vs {b.name[lang]}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <EmailCapture lang={lang} category={id} />
+</BaseLayout>
