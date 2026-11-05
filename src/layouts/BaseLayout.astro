@@ -14,8 +14,10 @@ interface Props {
   noindex?: boolean;
   /** Path (without lang) of the translated page when its slug differs */
   altPathWithoutLang?: string;
+  wide?: boolean;
+  bodyClass?: string;
 }
-const { lang, title, description, pathWithoutLang = '/', noindex = siteConfig.noindex, altPathWithoutLang } = Astro.props;
+const { lang, title, description, pathWithoutLang = '/', noindex = siteConfig.noindex, altPathWithoutLang, bodyClass = '' } = Astro.props;
 const canonical = new URL(`/${lang}${pathWithoutLang === '/' ? '/' : pathWithoutLang}`, Astro.site);
 const alt = lang === 'fr' ? 'en' : 'fr';
 const altPath = altPathWithoutLang ?? pathWithoutLang;
@@ -42,10 +44,13 @@ const fullTitle = `${title} | ${site.name}`;
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content={site.name} />
     <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="preconnect" href="https://www.google.com" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
-  <body>
+  <body class={bodyClass}>
     <Header lang={lang} pathWithoutLang={altPath} />
+    <slot name="hero" />
     <main class="wrap">
       <Disclosure lang={lang} />
       <slot />

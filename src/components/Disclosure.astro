@@ -2,9 +2,5 @@
 import { t, type Lang } from '../data/i18n';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
-const copy = t[lang];
 ---
-<aside class="disclosure" role="note">
-  <strong>{lang === 'fr' ? 'Divulgation d’affiliation' : 'Affiliate disclosure'}.</strong>
-  {copy.disclosure}
-</aside>
+<aside class="disclosure" role="note"><strong>{lang === 'fr' ? 'Divulgation d’affiliation' : 'Affiliate disclosure'} ·</strong> {t[lang].disclosure.replace(/^(Divulgation|Disclosure) ?: ?/, '')}</aside>

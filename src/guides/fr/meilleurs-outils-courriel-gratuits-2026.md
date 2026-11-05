@@ -109,7 +109,7 @@ L'outil compte moins que les sept premiers jours. Quel que soit votre choix :
 3. **Bâtissez un formulaire ou une page** avec un seul champ courriel et un consentement clair.
 4. **Écrivez cinq courriels de bienvenue** : livraison, histoire, l'outil que vous utilisez vraiment, un comparatif honnête, une offre douce.
 5. **Ajoutez votre identification, votre adresse postale et le lien de désabonnement** au modèle de pied de page, une fois pour toutes.
-6. **Faites pointer chaque contenu vers la page d'inscription** : un lien en bio, un mot-clé à commenter sous les vidéos, un lien dans chaque article.
+6. **Faites pointer chaque contenu vers la page d'inscription** : un lien en bio, un mot-clé anglais de niche sous les vidéos (LIST / EMAIL — voir content/cta-keywords.md), un lien dans chaque article.
 7. **Mesurez un seul chiffre par semaine**, en commençant par le taux d'inscription de votre page.
 
 Chaque plan gratuit de ce guide peut faire tourner cette semaine à 0 $.

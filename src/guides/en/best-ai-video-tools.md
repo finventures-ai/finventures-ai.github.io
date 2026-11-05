@@ -96,7 +96,7 @@ Descript edits audio and video by editing a transcript: delete a word in the tex
 
 You can produce your first month of short videos without paying anything:
 
-1. **Script** with a free AI chat assistant: hook (3 seconds), three value points, a "comment WORD" call-to-action, and a disclosure line if a link is involved.
+1. **Script** with a free AI chat assistant: hook (3 seconds), three value points, a niche English keyword CTA ("Comment FUNNEL / EMAIL / AI / PROMPTS"), and a disclosure line if a link is involved.
 2. **Test avatar video** on HeyGen's free plan: 3 videos a month, one minute each — enough to see whether an avatar suits your audience.
 3. **Test a training-style video** on Synthesia's free 10 minutes if you plan tutorials.
 4. **Self-recorded videos** remain the cheapest option: film on your phone and caption with free tools.
@@ -115,7 +115,7 @@ The watermark is the main cost of staying free. For testing formats and hooks, i
 - **Paying before testing the format.** Every tool here has a free tier or trial; use it to test hooks and formats first.
 - **Ignoring credit consumption.** Both HeyGen and Synthesia now bill in credits; a longer or higher-resolution video costs more of your allowance.
 - **Skipping captions.** Most short-form viewers watch without sound; add on-screen text.
-- **No call to action.** End every video with one action: comment a keyword, visit one link.
+- **No call to action.** End every video with one action: comment a niche English keyword (LIST, EMAIL, FUNNEL, SYSTEME, COMPARE, AI, PROMPTS), or visit one link.
 
 ## Disclosure in your own videos
 

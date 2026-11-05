@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const items = [
+  ['sequence-grow', 'Séquence de bienvenue GROW (5 courriels)'],
+  ['sequence-funnels', 'Séquence de bienvenue FUNNELS (5 courriels)'],
+  ['sequence-ai', 'Séquence de bienvenue AI (5 courriels)'],
+  ['scripts-20', '20 scripts vidéo'],
+  ['mots-cles-cta', 'Mots-clés CTA et réponses DM'],
+];
+---
+<BaseLayout lang="fr" title="Studio — aperçus internes" description="Aperçus internes non indexés." pathWithoutLang="/studio/" noindex={true}>
+  <h1>Studio — aperçus internes</h1>
+  <p class="muted">Lecture seule, non indexé par Google.</p>
+  <ul class="guide-list">{items.map(([s, t]) => <li><a class="card" href={`/studio/${s}/`}><h3>{t}</h3></a></li>)}</ul>
+</BaseLayout>

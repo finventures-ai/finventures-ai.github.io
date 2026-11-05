@@ -1,21 +1,16 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import EmailCapture from '../../../components/EmailCapture.astro';
-import { t, labelText} from '../../../data/i18n';
-import {
-  categories,
-  toolsByCategory,
-  comparisonPairs,
-  pairSlug,
-  type Category,
-} from '../../../data/tools';
-
-export function getStaticPaths() {
-  return categories.map((c) => ({ params: { id: c.id } }));
-}
-
+import ToolCard from '../../../components/ToolCard.astro';
+import AuthorBox from '../../../components/AuthorBox.astro';
+import ToolLogo from '../../../components/ToolLogo.astro';
+import { t } from '../../../data/i18n';
+import { categories, toolsByCategory, comparisonPairs, pairSlug, type Category } from '../../../data/tools';
+import { catIcon, startingPrice, dataScore } from '../../../data/review';
+export function getStaticPaths() { return categories.map((c) => ({ params: { id: c.id } })); }
 const lang = 'en' as const;
 const copy = t[lang];
+const fr = lang === 'fr';
 const id = Astro.params.id as Category;
 const cat = categories.find((c) => c.id === id)!;
 const list = toolsByCategory(id);
@@ -23,47 +18,24 @@ const pairs = comparisonPairs(id);
 const title = cat[lang];
 const pathWithoutLang = `/category/${id}/`;
 ---
-<BaseLayout
-  lang={lang}
-  title={title}
-  description={`${title} — ${list.length} ${lang === 'fr' ? 'avis' : 'reviews'}, ${pairs.length} ${copy.comparisons.toLowerCase()}`}
-  pathWithoutLang={pathWithoutLang}
->
-  <section class="hero">
-    <p class="muted small"><a href={`/${lang}/`}>{lang === 'fr' ? 'Accueil' : 'Home'}</a> / {title}</p>
-    <h1>{title}</h1>
-    <p class="lead">{cat.magnet[lang]}</p>
-  </section>
+<BaseLayout lang={lang} title={fr ? `Meilleurs outils ${title.toLowerCase()} (2026)` : `Best ${title.toLowerCase()} tools (2026)`} description={`${title} — ${list.length} ${fr ? 'avis' : 'reviews'}, ${pairs.length} ${copy.comparisons.toLowerCase()}`} pathWithoutLang={pathWithoutLang}>
+  <section class="hero-home" slot="hero"><div class="wrap" style="padding-top:2rem;padding-bottom:2rem">
+    <p class="crumbs" style="margin:0"><a href={`/${lang}/`}>{fr ? 'Accueil' : 'Home'}</a> › {title}</p>
+    <h1>{catIcon[id]} {fr ? `Meilleurs outils — ${title}` : `Best ${title} tools`}</h1>
+    <p class="lead">{list.length} {fr ? 'outils comparés' : 'tools compared'} · {pairs.length} {copy.comparisons.toLowerCase()} · {cat.magnet[lang]}</p>
+  </div></section>
+
+  <h2>{fr ? 'Tableau comparatif' : 'Comparison table'}</h2>
+  <div class="table-wrap"><table class="vs-table">
+    <thead><tr><th>{fr ? 'Outil' : 'Tool'}</th><th>{fr ? 'Idéal pour' : 'Best for'}</th><th>{fr ? 'Prix de départ' : 'Starting price'}</th><th>{fr ? 'Fiabilité' : 'Confidence'}</th><th></th></tr></thead>
+    <tbody>{list.map((tool) => <tr><td><span style="display:flex;align-items:center;gap:.5rem"><ToolLogo website={tool.website} name={tool.name[lang]} /><a href={`/${lang}/review/${tool.slug}/`}><strong>{tool.name[lang]}</strong></a></span></td><td>{tool.tagline[lang]}</td><td>{startingPrice(tool, lang)}</td><td>{dataScore(tool)} %</td><td><a class="cta sm" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{fr ? 'Essayer' : 'Try'}</a></td></tr>)}</tbody>
+  </table></div>
 
   <h2>{copy.categoryTools}</h2>
-  <div class="grid2">
-    {list.map((tool) => (
-      <article class="card">
-        <h3><a href={`/${lang}/review/${tool.slug}/`} >{tool.name[lang]}</a></h3>
-        <p class="muted">{tool.tagline[lang]}</p>
-        <p>
-          <span class={`badge ${tool.commission.label}`} >{labelText(tool.commission.label, lang)}</span>
-          {' '}{tool.commission.summary[lang]}
-        </p>
-        <p>
-          <a class="cta" href={`/go/${tool.brand}/`} >{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
-          {' '}
-          <a class="cta secondary" href={`/${lang}/pricing/${tool.slug}/`} >{copy.pricing}</a>
-        </p>
-      </article>
-    ))}
-  </div>
+  <div class="tool-grid">{list.map((tool) => <ToolCard tool={tool} lang={lang} />)}</div>
 
   <h2 id="comparisons">{copy.comparisons}</h2>
-  <ul class="clean">
-    {pairs.map(({ a, b }) => (
-      <li>
-        <a href={`/${lang}/vs/${pairSlug(a, b)}/`} >
-          {a.name[lang]} vs {b.name[lang]}
-        </a>
-      </li>
-    ))}
-  </ul>
-
+  <div class="tool-grid">{pairs.map(({ a, b }) => <a class="card" style="margin:0;color:inherit" href={`/${lang}/vs/${pairSlug(a, b)}/`}><strong>{a.name[lang]} <span class="muted">vs</span> {b.name[lang]}</strong></a>)}</div>
+  <AuthorBox lang={lang} />
   <EmailCapture lang={lang} category={id} />
 </BaseLayout>

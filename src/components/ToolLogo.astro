@@ -1,0 +1,6 @@
+---
+interface Props { website: string; name: string; size?: 'lg' }
+const { website, name, size } = Astro.props;
+const domain = new URL(website).hostname.replace(/^www\./, '');
+---
+<span class={`tlogo ${size ?? ''}`}><img src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`} alt={`${name} logo`} width="28" height="28" loading="lazy" decoding="async" /></span>

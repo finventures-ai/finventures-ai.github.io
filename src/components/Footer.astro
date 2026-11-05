@@ -1,32 +1,33 @@
 ---
 import { site, t, type Lang } from '../data/i18n';
+import Logo from './Logo.astro';
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const copy = t[lang];
-const address = site.mailingAddress?.trim()
-  ? site.mailingAddress
-  : (lang === 'fr' ? 'à venir' : 'coming soon');
+const fr = lang === 'fr';
 ---
 <footer class="site-footer">
   <div class="wrap cols">
     <div>
-      <strong>{site.name}</strong>
-      <p class="small">{copy.casl} <em>{address}</em></p>
+      <a class="brand" href={`/${lang}/`}><Logo /><span>Fin Ventures <b>AI</b></span></a>
+      <p class="small">{fr ? 'Avis et comparatifs indépendants d’outils courriel, tunnels et IA.' : 'Independent reviews and comparisons of email, funnel and AI tools.'}</p>
+      <p class="small">{copy.casl} <em>{site.mailingAddress}</em></p>
       <p class="small">{site.email}</p>
     </div>
     <div>
       <strong>{copy.footerNav}</strong>
       <ul class="clean">
-        <li><a href={`/${lang}/`}>{lang === 'fr' ? 'Accueil' : 'Home'}</a></li>
-        <li><a href={`/${lang}/category/email/`}>{lang === 'fr' ? 'Courriel' : 'Email'}</a></li>
-        <li><a href={`/${lang}/category/funnels/`}>{lang === 'fr' ? 'Tunnels' : 'Funnels'}</a></li>
-        <li><a href={`/${lang}/category/ai/`}>{lang === 'fr' ? 'IA' : 'AI'}</a></li>
+        <li><a href={`/${lang}/`}>{fr ? 'Accueil' : 'Home'}</a></li>
+        <li><a href={`/${lang}/category/email/`}>{fr ? 'Courriel' : 'Email'}</a></li>
+        <li><a href={`/${lang}/category/funnels/`}>{fr ? 'Tunnels' : 'Funnels'}</a></li>
+        <li><a href={`/${lang}/category/ai/`}>{fr ? 'IA' : 'AI'}</a></li>
+        <li><a href={`/${lang}/guides/`}>Guides</a></li>
       </ul>
     </div>
     <div>
       <strong>{copy.footerLegal}</strong>
       <p class="small">{copy.disclosure}</p>
-      <p class="small muted">© {new Date().getFullYear()} {site.owner} · {site.domain}</p>
+      <p class="small">© {new Date().getFullYear()} {site.owner} · Fin Ventures AI</p>
     </div>
   </div>
 </footer>

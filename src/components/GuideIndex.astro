@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmailCapture from './EmailCapture.astro';
+import { guides } from '../data/guides';
+import type { Lang } from '../data/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const fr = lang === 'fr';
+const list = guides[lang];
+---
+<BaseLayout lang={lang} title="Guides" description={fr ? 'Guides complets : Systeme.io, outils courriel gratuits, Kit vs MailerLite, vidéo IA.' : 'In-depth guides: Systeme.io, free email tools, Kit vs MailerLite, AI video.'} pathWithoutLang="/guides/">
+  <section class="hero-home" slot="hero"><div class="wrap" style="padding-top:2.2rem;padding-bottom:2rem">
+    <span class="pill">{list.length} guides</span>
+    <h1>{fr ? 'Guides complets' : 'In-depth guides'}</h1>
+    <p class="lead">{fr ? 'Des guides de fond, sourcés et mis à jour, pour choisir et démarrer sans dépenser.' : 'Sourced, up-to-date deep dives to choose and start without spending.'}</p>
+  </div></section>
+  <ul class="guide-list" style="margin-top:1.5rem">
+    {list.map((g) => <li><a class="card" href={`/${lang}/guides/${g.frontmatter.slug}/`}><span class="pill">Guide</span><h3>{g.frontmatter.title}</h3><p class="small muted">{g.frontmatter.description}</p><span class="small muted">{fr ? 'Mis à jour le' : 'Updated'} {g.frontmatter.updated}</span></a></li>)}
+  </ul>
+  <EmailCapture lang={lang} />
+</BaseLayout>

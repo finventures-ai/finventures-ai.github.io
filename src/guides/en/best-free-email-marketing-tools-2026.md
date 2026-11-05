@@ -117,7 +117,7 @@ The tool matters less than the first seven days. Whatever you pick:
 3. **Build one signup form or page** with a single email field and clear consent wording.
 4. **Write five welcome emails**: delivery, story, the tool you actually use, an honest comparison, a soft offer.
 5. **Add your sender identification, postal address and unsubscribe link** to the footer template once, so every email inherits it.
-6. **Point every piece of content to the signup page**: one link in bio, one keyword to comment under videos, one link in each article.
+6. **Point every piece of content to the signup page**: one link in bio, one niche English keyword under videos (LIST / EMAIL — see content/cta-keywords.md), one link in each article.
 7. **Measure one number per week**, starting with the signup rate of your page.
 
 Every free plan in this guide can run that entire week at $0.

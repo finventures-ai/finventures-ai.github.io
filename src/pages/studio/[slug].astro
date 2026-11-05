@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Toc from '../../components/Toc.astro';
+const mods = import.meta.glob<any>('../../studio/*.md', { eager: true });
+export function getStaticPaths() {
+  const m = import.meta.glob<any>('../../studio/*.md', { eager: true });
+  return Object.keys(m).map((k) => ({ params: { slug: k.split('/').pop()!.replace('.md', '') } }));
+}
+const key = Object.keys(mods).find((k) => k.endsWith(`/${Astro.params.slug}.md`))!;
+const mod = mods[key];
+const Content = mod.Content;
+const h1 = (mod.getHeadings?.() ?? []).find((h: any) => h.depth === 1)?.text ?? Astro.params.slug;
+---
+<BaseLayout lang="fr" title={`Aperçu interne — ${h1}`} description="Aperçu interne en lecture seule (non indexé)." pathWithoutLang={`/studio/${Astro.params.slug}/`} noindex={true}>
+  <p class="crumbs"><a href="/studio/">Studio (interne)</a> › {h1}</p>
+  <p class="pill" style="margin-top:1rem">Aperçu interne · lecture seule · non indexé</p>
+  <div class="layout two"><Toc lang="fr" target=".studio-doc" /><article class="prose studio-doc"><Content /></article></div>
+</BaseLayout>

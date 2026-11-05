@@ -1,141 +1,100 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import EmailCapture from '../../../components/EmailCapture.astro';
-import { t, labelText, publicPlanName} from '../../../data/i18n';
-import { comparisonPairs, pairSlug, getTool } from '../../../data/tools';
+import ToolLogo from '../../../components/ToolLogo.astro';
+import Toc from '../../../components/Toc.astro';
+import AuthorBox from '../../../components/AuthorBox.astro';
+import { t, labelText, publicPlanName } from '../../../data/i18n';
+import { comparisonPairs, pairSlug, getTool, categories } from '../../../data/tools';
+import { dataScore, prosCons, startingPrice } from '../../../data/review';
 
 export function getStaticPaths() {
-  return comparisonPairs().map(({ a, b }) => ({
-    params: { pair: pairSlug(a, b) },
-    props: { aSlug: a.slug, bSlug: b.slug },
-  }));
+  return comparisonPairs().map(({ a, b }) => ({ params: { pair: pairSlug(a, b) }, props: { aSlug: a.slug, bSlug: b.slug } }));
 }
-
 interface Props { aSlug: string; bSlug: string; }
 const { aSlug, bSlug } = Astro.props as Props;
 const lang = 'fr' as const;
 const copy = t[lang];
+const fr = lang === 'fr';
 const a = getTool(aSlug)!;
 const b = getTool(bSlug)!;
+const cat = categories.find((c) => c.id === a.category)!;
 const pathWithoutLang = `/vs/${pairSlug(a, b)}/`;
 const title = `${a.name[lang]} vs ${b.name[lang]}`;
-const featureKeys = Array.from(
-  new Set([...a.features.map((f) => f.key), ...b.features.map((f) => f.key)])
-);
+const featureKeys = Array.from(new Set([...a.features.map((f) => f.key), ...b.features.map((f) => f.key)]));
+const yn = (v: unknown) => v === true ? '✓' : v === false ? '✕' : v == null ? '—' : String(v);
+const cls = (v: unknown) => v === true ? 'yes' : v === false ? 'no' : '';
+const price = (tl: typeof a, p: { priceMonthlyUsd: number | null }) => p.priceMonthlyUsd == null ? copy.na : p.priceMonthlyUsd === 0 ? (fr ? 'Gratuit' : 'Free') : `$${p.priceMonthlyUsd}/${fr ? 'mois' : 'mo'}`;
 ---
-<BaseLayout lang={lang} title={title} description={title} pathWithoutLang={pathWithoutLang}>
-  <section class="hero">
-    <p class="muted small">
-      <a href={`/${lang}/category/${a.category}/`} >{a.category}</a> / {copy.vs}
-    </p>
-    <h1>{a.name[lang]} vs {b.name[lang]}</h1>
-    <p class="lead">{copy.verdictBody}</p>
+<BaseLayout lang={lang} title={title} description={fr ? `${title} : prix, fonctions et différences clés, comparés à partir des pages officielles.` : `${title}: pricing, features and key differences, compared from official pages.`} pathWithoutLang={pathWithoutLang}>
+  <section class="review-hero" slot="hero">
+    <div class="wrap">
+      <p class="crumbs"><a href={`/${lang}/`}>{fr ? 'Accueil' : 'Home'}</a> › <a href={`/${lang}/category/${a.category}/`}>{cat[lang]}</a> › {copy.vs}</p>
+      <h1 style="text-align:center;margin-top:1rem">{title} <span class="muted" style="font-weight:600">(2026)</span></h1>
+      <div class="meta" style="justify-content:center"><span>{fr ? 'Par Pierre Bernier' : 'By Pierre Bernier'}</span><span>{copy.updated} : 2026-11-05</span></div>
+      <div class="vs-head">
+        {[a, b].map((tool, i) => (
+          <>
+            {i === 1 && <div class="vs-badge">VS</div>}
+            <div class="card vs-col" style="margin:0">
+              <ToolLogo website={tool.website} name={tool.name[lang]} size="lg" />
+              <h2 style="margin:.2rem 0"><a href={`/${lang}/review/${tool.slug}/`} style="color:inherit">{tool.name[lang]}</a></h2>
+              <p class="muted small">{tool.tagline[lang]}</p>
+              <p style="font-weight:700;margin:.3rem 0">{startingPrice(tool, lang)}</p>
+              <p class="small muted">{fr ? 'Fiabilité des données' : 'Data confidence'} : {dataScore(tool)} %</p>
+              <a class="cta" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{fr ? 'Essayer' : 'Try'} {tool.name[lang].split(' (')[0]}</a>
+            </div>
+          </>
+        ))}
+      </div>
+    </div>
   </section>
 
-  <div class="grid2">
-    {[a, b].map((tool) => (
-      <article class="card">
-        <h2><a href={`/${lang}/review/${tool.slug}/`} >{tool.name[lang]}</a></h2>
-        <p class="muted">{tool.tagline[lang]}</p>
-        <p><span class={`badge ${tool.commission.label}`} >{labelText(tool.commission.label, lang)}</span> {tool.commission.summary[lang]}</p>
-        <p>
-          <a class="cta" href={`/go/${tool.brand}/`} >{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
-          <a class="cta secondary" href={`/${lang}/pricing/${tool.slug}/`} >{copy.pricing}</a>
-        </p>
-      </article>
-    ))}
+  <div class="layout two">
+    <Toc lang={lang} target=".vs-body" />
+    <div class="vs-body prose" style="max-width:none">
+      <h2>{fr ? 'En bref' : 'At a glance'}</h2>
+      <div class="grid2">
+        {[a, b].map((tool) => { const pc = prosCons(tool, lang); return (
+          <div class="card"><strong>{tool.name[lang]}</strong><ul style="list-style:none;padding:0">{pc.pros.map((p) => <li>✓ {p}</li>)}</ul><ul style="list-style:none;padding:0" class="muted">{pc.cons.map((c) => <li>✕ {c}</li>)}</ul></div>
+        ); })}
+      </div>
+
+      <h2>{copy.features}</h2>
+      <div class="table-wrap"><table class="vs-table">
+        <thead><tr><th>{fr ? 'Critère' : 'Criterion'}</th><th>{a.name[lang]}</th><th>{b.name[lang]}</th></tr></thead>
+        <tbody>{featureKeys.map((key) => { const fa = a.features.find((f) => f.key === key); const fb = b.features.find((f) => f.key === key); return (
+          <tr><td>{fa?.[lang] ?? fb?.[lang] ?? key}</td><td class={cls(fa?.value)}>{yn(fa?.value)}</td><td class={cls(fb?.value)}>{yn(fb?.value)}</td></tr>
+        ); })}</tbody>
+      </table></div>
+
+      <h2>{copy.plans}</h2>
+      <div class="table-wrap"><table class="vs-table">
+        <thead><tr><th>{a.name[lang]}</th><th>{b.name[lang]}</th></tr></thead>
+        <tbody><tr>
+          {[a, b].map((tool) => <td><ul class="clean">{tool.plans.map((p) => <li>{publicPlanName(p.name, lang)} : {price(tool, p)} <span class={`badge ${p.label}`}>{labelText(p.label, lang)}</span></li>)}</ul></td>)}
+        </tr></tbody>
+      </table></div>
+
+      <h2>{fr ? 'Programmes d’affiliation (transparence)' : 'Affiliate programs (transparency)'}</h2>
+      <div class="table-wrap"><table class="vs-table">
+        <thead><tr><th></th><th>{a.name[lang]}</th><th>{b.name[lang]}</th></tr></thead>
+        <tbody>
+          <tr><th>{copy.commission}</th><td>{a.commission.detail}</td><td>{b.commission.detail}</td></tr>
+          <tr><th>{copy.cookie}</th><td>{a.commission.cookieDays != null ? `${a.commission.cookieDays} ${copy.days}` : copy.lifetime}</td><td>{b.commission.cookieDays != null ? `${b.commission.cookieDays} ${copy.days}` : copy.lifetime}</td></tr>
+          <tr><th>{copy.payoutMin}</th><td>{a.commission.payoutMinUsd != null ? `$${a.commission.payoutMinUsd}` : copy.na}</td><td>{b.commission.payoutMinUsd != null ? `$${b.commission.payoutMinUsd}` : copy.na}</td></tr>
+          <tr><th>{copy.label}</th><td><span class={`badge ${a.commission.label}`}>{labelText(a.commission.label, lang)}</span></td><td><span class={`badge ${b.commission.label}`}>{labelText(b.commission.label, lang)}</span></td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>{fr ? 'Verdict' : 'Verdict'}</h2>
+      <div class="grid2">
+        {[a, b].map((tool) => (
+          <div class="card verdict"><strong>{fr ? `Choisissez ${tool.name[lang]} si…` : `Pick ${tool.name[lang]} if…`}</strong><p class="muted">{tool.tagline[lang]} — {startingPrice(tool, lang).toLowerCase()}.</p><a class="cta sm" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{fr ? 'Essayer' : 'Try it'}</a> <a class="cta sm secondary" href={`/${lang}/review/${tool.slug}/`}>{fr ? 'Avis complet' : 'Full review'}</a></div>
+        ))}
+      </div>
+      <AuthorBox lang={lang} />
+    </div>
   </div>
-
-  <article class="card">
-    <h2>{copy.commission}</h2>
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>{a.name[lang]}</th>
-          <th>{b.name[lang]}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>{copy.commission}</th>
-          <td>{a.commission.detail}</td>
-          <td>{b.commission.detail}</td>
-        </tr>
-        <tr>
-          <th>{copy.cookie}</th>
-          <td>{a.commission.cookieDays != null ? `${a.commission.cookieDays} ${copy.days}` : copy.lifetime}</td>
-          <td>{b.commission.cookieDays != null ? `${b.commission.cookieDays} ${copy.days}` : copy.lifetime}</td>
-        </tr>
-        <tr>
-          <th>{copy.payoutMin}</th>
-          <td>{a.commission.payoutMinUsd != null ? `$${a.commission.payoutMinUsd}` : copy.na}</td>
-          <td>{b.commission.payoutMinUsd != null ? `$${b.commission.payoutMinUsd}` : copy.na}</td>
-        </tr>
-        <tr>
-          <th>{copy.label}</th>
-          <td><span class={`badge ${a.commission.label}`} >{labelText(a.commission.label, lang)}</span></td>
-          <td><span class={`badge ${b.commission.label}`} >{labelText(b.commission.label, lang)}</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </article>
-
-  <article class="card">
-    <h2>{copy.plans}</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>{a.name[lang]}</th>
-          <th>{b.name[lang]}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <ul class="clean">
-              {a.plans.map((p) => (
-                <li>{publicPlanName(p.name, lang)}: {p.priceMonthlyUsd == null ? copy.na : p.priceMonthlyUsd === 0 ? 'Free' : `$${p.priceMonthlyUsd}/mo`} <span class={`badge ${p.label}`} >{labelText(p.label, lang)}</span></li>
-              ))}
-            </ul>
-          </td>
-          <td>
-            <ul class="clean">
-              {b.plans.map((p) => (
-                <li>{publicPlanName(p.name, lang)}: {p.priceMonthlyUsd == null ? copy.na : p.priceMonthlyUsd === 0 ? 'Free' : `$${p.priceMonthlyUsd}/mo`} <span class={`badge ${p.label}`} >{labelText(p.label, lang)}</span></li>
-              ))}
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </article>
-
-  <article class="card">
-    <h2>{copy.features}</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>{lang === 'fr' ? 'Critère' : 'Criterion'}</th>
-          <th>{a.name[lang]}</th>
-          <th>{b.name[lang]}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {featureKeys.map((key) => {
-          const fa = a.features.find((f) => f.key === key);
-          const fb = b.features.find((f) => f.key === key);
-          return (
-            <tr>
-              <td>{fa?.[lang] ?? fb?.[lang] ?? key}</td>
-              <td>{fa ? String(fa.value) : '—'}</td>
-              <td>{fb ? String(fb.value) : '—'}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
-  </article>
-
   <EmailCapture lang={lang} category={a.category} />
 </BaseLayout>

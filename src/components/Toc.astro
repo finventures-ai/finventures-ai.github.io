@@ -1,0 +1,18 @@
+---
+import type { Lang } from '../data/i18n';
+interface Props { lang: Lang; target?: string }
+const { lang, target = '.prose' } = Astro.props;
+---
+<nav class="toc" aria-label="Table of contents" data-target={target}><strong>{lang === 'fr' ? 'Sur cette page' : 'On this page'}</strong><div class="toc-links"></div></nav>
+<script>
+  document.querySelectorAll<HTMLElement>('.toc').forEach((toc) => {
+    const root = document.querySelector(toc.dataset.target || '.prose');
+    const box = toc.querySelector('.toc-links');
+    if (!root || !box) return;
+    const hs = Array.from(root.querySelectorAll('h2'));
+    const slug = (s: string) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const links = hs.map((h) => { if (!h.id) h.id = slug(h.textContent || ''); const a = document.createElement('a'); a.href = '#' + h.id; a.textContent = h.textContent; box.appendChild(a); return a; });
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { links.forEach((l) => l.classList.toggle('active', l.hash === '#' + e.target.id)); } }), { rootMargin: '0px 0px -70% 0px' });
+    hs.forEach((h) => io.observe(h));
+  });
+</script>

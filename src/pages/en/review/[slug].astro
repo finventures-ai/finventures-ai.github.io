@@ -1,88 +1,98 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import EmailCapture from '../../../components/EmailCapture.astro';
-import { t, labelText} from '../../../data/i18n';
-import { tools, toolsByCategory, getTool, pairSlug } from '../../../data/tools';
+import ToolLogo from '../../../components/ToolLogo.astro';
+import Toc from '../../../components/Toc.astro';
+import AuthorBox from '../../../components/AuthorBox.astro';
+import { t, labelText, publicPlanName, publicNote } from '../../../data/i18n';
+import { tools, toolsByCategory, getTool, pairSlug, categories } from '../../../data/tools';
+import { dataScore, prosCons, startingPrice } from '../../../data/review';
 
 export function getStaticPaths() {
   return tools.map((tool) => ({ params: { slug: tool.slug } }));
 }
-
 const lang = 'en' as const;
 const copy = t[lang];
+const fr = lang === 'fr';
 const tool = getTool(Astro.params.slug!)!;
+const cat = categories.find((c) => c.id === tool.category)!;
 const alts = toolsByCategory(tool.category).filter((x) => x.slug !== tool.slug).slice(0, 5);
-
 function orderedPairSlug(x: typeof tool, y: typeof tool) {
   const xi = tools.findIndex((t) => t.slug === x.slug);
   const yi = tools.findIndex((t) => t.slug === y.slug);
   return xi < yi ? pairSlug(x, y) : pairSlug(y, x);
 }
-
+const score = dataScore(tool);
+const { pros, cons } = prosCons(tool, lang);
+const price = startingPrice(tool, lang);
 const pathWithoutLang = `/review/${tool.slug}/`;
 const title = `${copy.review}: ${tool.name[lang]}`;
+const yn = (v: unknown) => v === true ? (fr ? 'Oui' : 'Yes') : v === false ? (fr ? 'Non' : 'No') : String(v);
 ---
-<BaseLayout lang={lang} title={title} description={tool.tagline[lang]} pathWithoutLang={pathWithoutLang}>
-  <section class="hero">
-    <p class="muted small">
-      <a href={`/${lang}/`}>{lang === 'fr' ? 'Accueil' : 'Home'}</a> /
-      <a href={`/${lang}/category/${tool.category}/`} >{tool.category}</a> /
-      {tool.name[lang]}
-    </p>
-    <h1>{tool.name[lang]} — {copy.review}</h1>
-    <p class="lead">{tool.tagline[lang]}</p>
-    <p>
-      <a class="cta" href={`/go/${tool.brand}/`} >{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
-      <a class="cta secondary" href={`/${lang}/pricing/${tool.slug}/`} >{copy.pricing}</a>
-      <a class="cta secondary" href={tool.website} rel="noopener noreferrer" target="_blank">{lang === 'fr' ? 'Site officiel' : 'Official site'}</a>
-    </p>
+<BaseLayout lang={lang} title={title} description={tool.tagline[lang]} pathWithoutLang={pathWithoutLang} bodyClass="has-bar">
+  <section class="review-hero" slot="hero">
+    <div class="wrap">
+      <p class="crumbs"><a href={`/${lang}/`}>{fr ? 'Accueil' : 'Home'}</a> › <a href={`/${lang}/category/${tool.category}/`}>{cat[lang]}</a> › {tool.name[lang]}</p>
+      <div class="rh-grid">
+        <ToolLogo website={tool.website} name={tool.name[lang]} size="lg" />
+        <div>
+          <h1>{fr ? `Avis ${tool.name[lang]} (2026)` : `${tool.name[lang]} Review (2026)`}</h1>
+          <p class="lead" style="margin:.2rem 0 .5rem">{tool.tagline[lang]}</p>
+          <div class="meta"><span>{fr ? 'Par Pierre Bernier' : 'By Pierre Bernier'}</span><span>{copy.updated} : 2026-11-05</span><a href={`/${lang}/pricing/${tool.slug}/`}>{copy.pricing}</a></div>
+        </div>
+      </div>
+      <div class="scorebox">
+        <div class="score" style={`--p:${score}`}><div><b>{(score / 20).toFixed(1)}</b><small>{fr ? 'fiabilité /5' : 'confidence /5'}</small></div></div>
+        <div><h4>{fr ? 'Les +' : 'The best'}</h4><ul class="pros">{pros.length ? pros.map((p) => <li>{p}</li>) : <li>{tool.tagline[lang]}</li>}</ul></div>
+        <div><h4>{fr ? 'Les −' : 'The worst'}</h4><ul class="cons">{cons.map((c) => <li>{c}</li>)}</ul></div>
+        <div class="sb-cta"><h4>{fr ? 'Prix de départ' : 'Starting from'}</h4><p style="margin:0 0 .5rem;font-weight:700">{price}</p><a class="cta" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{fr ? 'Essayer gratuitement' : 'Try for free'}</a></div>
+      </div>
+    </div>
   </section>
 
-  <article class="card">
-    <h2>{copy.verdict}</h2>
-    <p>{copy.verdictBody}</p>
-    <p><span class={`badge ${tool.commission.label}`} >{labelText(tool.commission.label, lang)}</span> {copy.commission}: {tool.commission.summary[lang]}</p>
-    <ul class="clean">
-      <li>{copy.cookie}: {tool.commission.cookieDays != null ? `${tool.commission.cookieDays} ${copy.days}` : copy.lifetime}</li>
-      <li>{copy.payoutMin}: {tool.commission.payoutMinUsd != null ? `$${tool.commission.payoutMinUsd}` : copy.na}</li>
-      <li>{copy.source}: <a href={tool.commission.source} rel="noopener noreferrer" target="_blank">{tool.commission.source}</a></li>
-    </ul>
-    {tool.flags && tool.flags.length > 0 && (
-      <div>
-        <h3>{copy.flags}</h3>
-        <ul class="clean">{tool.flags.map((f) => <li>{f}</li>)}</ul>
+  <div class="layout">
+    <Toc lang={lang} target=".review-body" />
+    <div class="review-body prose">
+      <AuthorBox lang={lang} />
+      <h2>{copy.verdict.replace(/ \(.*\)/, '')}</h2>
+      <div class="card verdict">
+        <p><strong>{tool.name[lang]}</strong> — {tool.tagline[lang]}. {fr ? `Prix de départ : ${price.toLowerCase()}.` : `Starting price: ${price.toLowerCase()}.`}</p>
+        <p class="muted small">{fr ? `Indice de fiabilité ${score} % : part des données confirmées sur les pages officielles.` : `Confidence index ${score}%: share of data points confirmed on official pages.`}</p>
+        <a class="cta" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
       </div>
-    )}
-  </article>
 
-  <article class="card">
-    <h2>{copy.features}</h2>
-    <table>
-      <thead><tr><th>{lang === 'fr' ? 'Critère' : 'Criterion'}</th><th>{lang === 'fr' ? 'Valeur' : 'Value'}</th><th>{copy.label}</th></tr></thead>
-      <tbody>
-        {tool.features.map((f) => (
-          <tr>
-            <td>{f[lang]}</td>
-            <td>{String(f.value)}</td>
-            <td><span class={`badge ${f.label}`} >{labelText(f.label, lang)}</span></td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </article>
+      <h2>{copy.features}</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>{fr ? 'Critère' : 'Criterion'}</th><th>{fr ? 'Valeur' : 'Value'}</th><th>{copy.label}</th></tr></thead>
+        <tbody>{tool.features.map((f) => <tr><td>{f[lang]}</td><td class={f.value === true ? 'yes' : f.value === false ? 'no' : ''}>{yn(f.value)}</td><td><span class={`badge ${f.label}`}>{labelText(f.label, lang)}</span></td></tr>)}</tbody>
+      </table></div>
 
-  <article class="card">
-    <h2>{copy.alternatives}</h2>
-    <ul class="clean">
-      {alts.map((a) => (
-        <li>
-          <a href={`/${lang}/review/${a.slug}/`} >{a.name[lang]}</a>
-          {' · '}
-          <a href={`/${lang}/vs/${orderedPairSlug(tool, a)}/`} >vs</a>
-        </li>
-      ))}
-    </ul>
-  </article>
+      <h2>{copy.plans}</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>{fr ? 'Forfait' : 'Plan'}</th><th>USD / {fr ? 'mois' : 'mo'}</th><th>Note</th><th>{copy.label}</th></tr></thead>
+        <tbody>{tool.plans.map((p) => <tr><td>{publicPlanName(p.name, lang)}</td><td>{p.priceMonthlyUsd == null ? copy.na : p.priceMonthlyUsd === 0 ? (fr ? 'Gratuit' : 'Free') : `$${p.priceMonthlyUsd}`}</td><td>{publicNote(p.note, lang)}</td><td><span class={`badge ${p.label}`}>{labelText(p.label, lang)}</span></td></tr>)}</tbody>
+      </table></div>
+      <p class="small muted">{fr ? 'Les prix évoluent — vérifiez la page officielle avant d’acheter.' : 'Prices change — check the official page before buying.'} <a href={tool.pricingUrl} rel="noopener noreferrer" target="_blank">{fr ? 'Tarifs officiels' : 'Official pricing'} ↗</a></p>
+
+      {tool.flags && tool.flags.length > 0 && (<><h2>{copy.flags}</h2><ul>{tool.flags.map((f) => <li>{f}</li>)}</ul></>)}
+
+      <h2>{fr ? 'Programme d’affiliation (transparence)' : 'Affiliate program (transparency)'}</h2>
+      <p><span class={`badge ${tool.commission.label}`}>{labelText(tool.commission.label, lang)}</span> {tool.commission.summary[lang]}</p>
+      <ul>
+        <li>{copy.cookie} : {tool.commission.cookieDays != null ? `${tool.commission.cookieDays} ${copy.days}` : copy.lifetime}</li>
+        <li>{copy.payoutMin} : {tool.commission.payoutMinUsd != null ? `$${tool.commission.payoutMinUsd}` : copy.na}</li>
+        <li>{copy.source} : {tool.commission.source.startsWith("http") ? <a href={tool.commission.source} rel="noopener noreferrer" target="_blank">{tool.commission.source.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]}</a> : tool.commission.source}</li>
+      </ul>
+
+      <h2>{copy.alternatives}</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>{fr ? 'Outil' : 'Tool'}</th><th>{fr ? 'Prix de départ' : 'Starting price'}</th><th></th></tr></thead>
+        <tbody>{alts.map((a) => <tr><td><a href={`/${lang}/review/${a.slug}/`}>{a.name[lang]}</a></td><td>{startingPrice(a, lang)}</td><td><a href={`/${lang}/vs/${orderedPairSlug(tool, a)}/`}>{tool.name[lang]} vs {a.name[lang]} →</a></td></tr>)}</tbody>
+      </table></div>
+    </div>
+    <aside class="side-cta"><div class="card"><ToolLogo website={tool.website} name={tool.name[lang]} size="lg" /><strong>{tool.name[lang]}</strong><p class="small muted">{price}</p><a class="cta" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{fr ? 'Essayer gratuitement' : 'Try for free'}</a><p class="small muted" style="margin:.4rem 0 0">{fr ? 'Lien affilié' : 'Affiliate link'}</p></div></aside>
+  </div>
 
   <EmailCapture lang={lang} category={tool.category} />
+  <div class="sticky-bar"><ToolLogo website={tool.website} name={tool.name[lang]} /><span class="name">{tool.name[lang]}</span><a class="cta sm" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{fr ? 'Essayer' : 'Try it'}</a></div>
 </BaseLayout>

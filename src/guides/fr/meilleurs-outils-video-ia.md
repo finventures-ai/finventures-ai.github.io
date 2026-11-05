@@ -98,7 +98,7 @@ Descript monte l'audio et la vidéo en modifiant une transcription : supprimez u
 
 Vous pouvez produire votre premier mois de vidéos courtes sans rien payer :
 
-1. **Script** avec un assistant IA gratuit : accroche (3 secondes), trois points de valeur, un appel « commente MOT », et une ligne de divulgation s'il y a un lien.
+1. **Script** avec un assistant IA gratuit : accroche (3 secondes), trois points de valeur, un appel « Écris FUNNEL / EMAIL / AI / PROMPTS en commentaire » (mot anglais adapté à la niche), et une ligne de divulgation s'il y a un lien.
 2. **Vidéo avatar test** sur le plan gratuit de HeyGen : 3 vidéos par mois, une minute chacune — assez pour voir si un avatar convient à votre audience.
 3. **Vidéo de type formation** sur les 10 minutes gratuites de Synthesia si vous prévoyez des tutoriels.
 4. **Vidéos tournées vous-même** : l'option la moins chère reste votre téléphone, avec des sous-titres faits par des outils gratuits.
@@ -117,7 +117,7 @@ Le filigrane est le principal coût de la gratuité. Pour tester formats et accr
 - **Payer avant d'avoir testé le format.** Chaque outil ici a un palier gratuit ou un essai ; servez-vous-en d'abord pour tester accroches et formats.
 - **Ignorer la consommation de crédits.** HeyGen et Synthesia facturent maintenant en crédits ; une vidéo plus longue ou en plus haute résolution coûte plus.
 - **Oublier les sous-titres.** La plupart des gens regardent les vidéos courtes sans le son ; ajoutez du texte à l'écran.
-- **Pas d'appel à l'action.** Terminez chaque vidéo par une seule action : commenter un mot-clé, visiter un lien.
+- **Pas d'appel à l'action.** Terminez chaque vidéo par une seule action : commenter un mot-clé anglais de niche (LIST, EMAIL, FUNNEL, SYSTEME, COMPARE, AI, PROMPTS), ou visiter un lien.
 
 ## La divulgation dans vos propres vidéos
 

@@ -1,20 +1,23 @@
 ---
-import { site, t, otherLang, type Lang } from '../data/i18n';
+import { t, otherLang, type Lang } from '../data/i18n';
+import Logo from './Logo.astro';
 interface Props { lang: Lang; pathWithoutLang?: string; }
 const { lang, pathWithoutLang = '/' } = Astro.props;
 const copy = t[lang];
 const alt = otherLang(lang);
-const altPath = `/${alt}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+const altPath = `/${alt}${pathWithoutLang === '/' ? '/' : pathWithoutLang}`;
+const fr = lang === 'fr';
 ---
 <header class="site-header">
   <div class="wrap inner">
-    <a class="brand" href={`/${lang}/`}>{site.name}</a>
+    <a class="brand" href={`/${lang}/`} aria-label="Fin Ventures AI"><Logo /><span>Fin Ventures <b>AI</b></span></a>
     <nav class="nav" aria-label="Main">
-      <a href={`/${lang}/category/email/`}>{lang === 'fr' ? 'Courriel' : 'Email'}</a>
-      <a href={`/${lang}/category/funnels/`}>{lang === 'fr' ? 'Tunnels' : 'Funnels'}</a>
-      <a href={`/${lang}/category/ai/`}>{lang === 'fr' ? 'IA' : 'AI'}</a>
+      <a href={`/${lang}/category/email/`}>{fr ? 'Courriel' : 'Email'}</a>
+      <a href={`/${lang}/category/funnels/`}>{fr ? 'Tunnels' : 'Funnels'}</a>
+      <a href={`/${lang}/category/ai/`}>{fr ? 'IA' : 'AI'}</a>
       <a href={`/${lang}/guides/`}>Guides</a>
-      <a href={altPath}>{copy.langSwitch}</a>
+      <a href={`/${lang}/#methode`}>{fr ? 'Méthode' : 'Method'}</a>
+      <a class="lang" href={altPath} hreflang={alt}>{copy.langSwitch}</a>
     </nav>
   </div>
 </header>

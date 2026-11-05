@@ -1,22 +1,28 @@
 ---
-import { t, type Lang } from '../data/i18n';
+import type { Lang } from '../data/i18n';
 import type { Category } from '../data/tools';
-import { categories } from '../data/tools';
 interface Props { lang: Lang; category?: Category; }
-const { lang, category } = Astro.props;
-const copy = t[lang];
-const magnet = category
-  ? categories.find((c) => c.id === category)?.magnet[lang]
-  : lang === 'fr'
-    ? 'Guide mix B (Courriel · Tunnels · IA)'
-    : 'Mix B guide (Email · Funnels · AI)';
+const { lang } = Astro.props;
+const fr = lang === 'fr';
+const m = [
+  { f: 'GROW', fr: ['Guide courriel', 'Lancer sa liste à 0 $'], en: ['Email guide', 'Start your list for $0'] },
+  { f: 'FUNNELS', fr: ['Guide tunnels', 'Premier tunnel en 1 jour'], en: ['Funnels guide', 'First funnel in a day'] },
+  { f: 'AI', fr: ['Guide IA', 'Outils IA qui font gagner du temps'], en: ['AI guide', 'AI tools that save hours'] },
+];
 ---
 <section class="capture" id="magnet">
-  <h2>{copy.emailCaptureTitle}</h2>
-  <p class="muted small">{magnet}</p>
-  <p class="muted small">{copy.emailCaptureHint}</p>
+  <span class="pill" style="background:rgba(255,255,255,.18);color:#fff">{fr ? '3 guides PDF gratuits' : '3 free PDF guides'}</span>
+  <h2 style="margin-top:.6rem">{fr ? 'Choisissez votre guide gratuit' : 'Pick your free guide'}</h2>
+  <p>{fr ? 'Des listes de contrôle concrètes, sans jargon. Téléchargement direct.' : 'Practical checklists, no fluff. Direct download.'}</p>
+  <div class="magnets">
+    {m.map((x) => (
+      <a class="magnet" href={`/downloads/${lang}/${x.f}.pdf`} download><b>📘 {x[lang][0]}</b><span>{x[lang][1]} · PDF</span></a>
+    ))}
+  </div>
   <form onsubmit="return false;" aria-disabled="true">
-    <input type="email" name="email" placeholder={copy.emailPlaceholder} disabled />
-    <button type="button" disabled>{copy.emailSubmit}</button>
+    <label class="sr" for={`em-${lang}`} style="position:absolute;left:-9999px">Email</label>
+    <input id={`em-${lang}`} type="email" name="email" placeholder={fr ? 'vous@exemple.com' : 'you@example.com'} disabled />
+    <button type="button" disabled>{fr ? 'Infolettre (bientôt)' : 'Newsletter (soon)'}</button>
   </form>
+  <p class="fine">{fr ? 'Consentement exprès (LCAP). Désabonnement en un clic. Aucun envoi pour l’instant.' : 'Express consent (CASL). One-click unsubscribe. No sends yet.'}</p>
 </section>

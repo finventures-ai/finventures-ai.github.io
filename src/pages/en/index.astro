@@ -1,58 +1,75 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EmailCapture from '../../components/EmailCapture.astro';
+import ToolCard from '../../components/ToolCard.astro';
 import { t } from '../../data/i18n';
-import { categories, tools, comparisonPairs } from '../../data/tools';
+import { categories, tools, toolsByCategory, comparisonPairs, pairSlug } from '../../data/tools';
+import { guides } from '../../data/guides';
+import { catIcon } from '../../data/review';
 const lang = 'en' as const;
 const copy = t[lang];
+const fr = lang === 'fr';
 const pairCount = comparisonPairs().length;
+const popular = comparisonPairs().slice(0, 6);
+const gl = guides[lang].slice(0, 3);
 ---
 <BaseLayout lang={lang} title={copy.homeTitle} description={copy.homeDesc} pathWithoutLang="/">
-  <section class="hero">
-    <h1>{copy.homeTitle}</h1>
-    <p class="lead">{copy.homeLead}</p>
-    <p class="muted small">{tools.length} {lang === 'fr' ? 'outils' : 'tools'} · {pairCount} {copy.comparisons.toLowerCase()} · FR/EN</p>
+  <section class="hero-home" slot="hero">
+    <div class="wrap">
+      <span class="pill">{fr ? 'Avis indépendants · mis à jour nov. 2026' : 'Independent reviews · updated Nov 2026'}</span>
+      <h1>{fr ? 'Trouvez le bon outil courriel, tunnel ou IA en 5 minutes' : 'Find the right email, funnel or AI tool in 5 minutes'}</h1>
+      <p class="lead">{fr ? 'Des avis et comparatifs basés sur les pages officielles, en français et en anglais. Choisissez votre porte :' : 'Reviews and comparisons built from official pages, in English and French. Pick your door:'}</p>
+      <div class="doors">
+        {categories.map((c) => (
+          <a class="door" href={`/${lang}/category/${c.id}/`}>
+            <span class="ico">{catIcon[c.id]}</span>
+            <h2>{c[lang]}</h2>
+            <p>{toolsByCategory(c.id).length} {fr ? 'outils comparés' : 'tools compared'} · {comparisonPairs(c.id).length} {fr ? 'comparatifs' : 'comparisons'}</p>
+            <p>{c.magnet[lang]}</p>
+            <span class="go">{fr ? 'Voir les meilleurs →' : 'See the best →'}</span>
+          </a>
+        ))}
+      </div>
+      <div class="trust">
+        <span>{tools.length} {fr ? 'outils analysés' : 'tools analysed'}</span>
+        <span>{pairCount} {fr ? 'comparatifs X vs Y' : 'X vs Y comparisons'}</span>
+        <span>{fr ? 'Sources officielles citées' : 'Official sources cited'}</span>
+        <span>{fr ? 'Bilingue FR/EN' : 'Bilingual EN/FR'}</span>
+      </div>
+    </div>
   </section>
 
-  <h2>{copy.doorsHeading}</h2>
-  <div class="doors">
-    {categories.map((c) => (
-      <a class="door" href={`/${lang}/category/${c.id}/`} >
-        <h2>{c[lang]}</h2>
-        <p>{c.magnet[lang]}</p>
-      </a>
-    ))}
-  </div>
+  {categories.map((c) => (
+    <section class="section">
+      <div class="section-head"><h2>{catIcon[c.id]} {fr ? 'Meilleurs outils' : 'Best tools'} — {c[lang]}</h2><a href={`/${lang}/category/${c.id}/`}>{fr ? 'Tout voir →' : 'See all →'}</a></div>
+      <div class="tool-grid">{toolsByCategory(c.id).slice(0, 6).map((tool) => <ToolCard tool={tool} lang={lang} />)}</div>
+    </section>
+  ))}
 
-  <div class="grid2">
-    <div class="card">
-      <h3>{copy.allReviews}</h3>
-      <ul class="clean">
-        {tools.map((tool) => (
-          <li>
-            <a href={`/${lang}/review/${tool.slug}/`} >{tool.name[lang]}</a>
-            {' · '}
-            <a href={`/${lang}/pricing/${tool.slug}/`} >{copy.pricing}</a>
-          </li>
-        ))}
-      </ul>
+  <section class="section">
+    <div class="section-head"><h2>{fr ? 'Comparatifs populaires' : 'Popular comparisons'}</h2></div>
+    <div class="tool-grid">
+      {popular.map(({ a, b }) => (
+        <a class="card" style="margin:0;color:inherit" href={`/${lang}/vs/${pairSlug(a, b)}/`}><strong>{a.name[lang]} <span class="muted">vs</span> {b.name[lang]}</strong><p class="small muted" style="margin:.3rem 0 0">{fr ? 'Prix, fonctions et différences clés' : 'Pricing, features and key differences'} →</p></a>
+      ))}
     </div>
-    <div class="card">
-      <h3>{copy.comparisons}</h3>
-      <p class="muted small">
-        {lang === 'fr'
-          ? 'Pages X vs Y générées automatiquement par catégorie (même niche).'
-          : 'X vs Y pages auto-generated within each niche.'}
-      </p>
-      <ul class="clean">
-        {categories.map((c) => (
-          <li>
-            <a href={`/${lang}/category/${c.id}/#comparisons`} >{c[lang]} — {comparisonPairs(c.id).length} vs</a>
-          </li>
-        ))}
-      </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><h2>{fr ? 'Guides complets' : 'In-depth guides'}</h2><a href={`/${lang}/guides/`}>{fr ? 'Tous les guides →' : 'All guides →'}</a></div>
+    <ul class="guide-list" style="margin-top:1.2rem">
+      {gl.map((g) => <li><a class="card" href={`/${lang}/guides/${g.frontmatter.slug}/`}><span class="pill">Guide</span><h3>{g.frontmatter.title}</h3><p class="small muted">{g.frontmatter.description}</p></a></li>)}
+    </ul>
+  </section>
+
+  <section class="section" id="methode">
+    <h2>{fr ? 'Notre méthode' : 'Our methodology'}</h2>
+    <div class="grid2">
+      <div class="card"><h3>1. {fr ? 'Sources officielles' : 'Official sources'}</h3><p class="muted">{fr ? 'Prix, forfaits et conditions relevés sur la page officielle, avec le lien cité.' : 'Pricing, plans and terms read from the official page, with the link cited.'}</p></div>
+      <div class="card"><h3>2. {fr ? 'Libellés honnêtes' : 'Honest labels'}</h3><p class="muted">{fr ? 'Chaque donnée est marquée vérifiée, estimée ou à venir. L’indice de fiabilité en découle.' : 'Every data point is labelled verified, estimated or coming soon. The confidence index is derived from it.'}</p></div>
+      <div class="card"><h3>3. {fr ? 'Mises à jour' : 'Updates'}</h3><p class="muted">{fr ? 'Revue hebdomadaire des prix et des conditions ; la date de mise à jour est affichée.' : 'Weekly review of pricing and terms; the update date is shown.'}</p></div>
     </div>
-  </div>
+  </section>
 
   <EmailCapture lang={lang} />
 </BaseLayout>

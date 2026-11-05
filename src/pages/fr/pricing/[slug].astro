@@ -2,6 +2,8 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { t, labelText, publicPlanName, publicNote} from '../../../data/i18n';
 import { tools, getTool } from '../../../data/tools';
+import AuthorBox from '../../../components/AuthorBox.astro';
+import EmailCapture from '../../../components/EmailCapture.astro';
 
 export function getStaticPaths() {
   return tools.map((tool) => ({ params: { slug: tool.slug } }));
@@ -14,8 +16,8 @@ const pathWithoutLang = `/pricing/${tool.slug}/`;
 const title = `${copy.pricing}: ${tool.name[lang]}`;
 ---
 <BaseLayout lang={lang} title={title} description={`${tool.name[lang]} ${copy.pricing}`} pathWithoutLang={pathWithoutLang}>
-  <section class="hero">
-    <p class="muted small">
+  <section class="hero" style="padding-top:1rem">
+    <p class="crumbs">
       <a href={`/${lang}/review/${tool.slug}/`} >{tool.name[lang]}</a> / {copy.pricing}
     </p>
     <h1>{tool.name[lang]} — {copy.pricing}</h1>
@@ -28,7 +30,7 @@ const title = `${copy.pricing}: ${tool.name[lang]}`;
 
   <article class="card">
     <h2>{copy.plans}</h2>
-    <table>
+    <div class="table-wrap"><table>
       <thead>
         <tr>
           <th>{lang === 'fr' ? 'Forfait' : 'Plan'}</th>
@@ -47,8 +49,8 @@ const title = `${copy.pricing}: ${tool.name[lang]}`;
           </tr>
         ))}
       </tbody>
-    </table>
-    <p class="muted small">{lang === 'fr' ? 'Les prix évoluent — vérifier la page officielle avant achat.' : 'Prices change — verify the official page before buying.'}</p>
+    </table></div>
+    <p class="crumbs">{lang === 'fr' ? 'Les prix évoluent — vérifier la page officielle avant achat.' : 'Prices change — verify the official page before buying.'}</p>
   </article>
 
   <article class="card">
@@ -56,4 +58,6 @@ const title = `${copy.pricing}: ${tool.name[lang]}`;
     <p><span class={`badge ${tool.commission.label}`} >{labelText(tool.commission.label, lang)}</span> {tool.commission.summary[lang]}</p>
     <p class="small muted">{tool.commission.detail}</p>
   </article>
+  <AuthorBox lang={lang} />
+  <EmailCapture lang={lang} category={tool.category} />
 </BaseLayout>

@@ -1,0 +1,14 @@
+---
+import type { Lang } from '../data/i18n';
+interface Props { lang: Lang; updated?: string }
+const { lang, updated = '2026-11-05' } = Astro.props;
+const fr = lang === 'fr';
+---
+<aside class="card author" id="methode-box">
+  <div class="avatar">PB</div>
+  <div>
+    <strong>{fr ? 'Par Pierre Bernier · Fin Ventures AI' : 'By Pierre Bernier · Fin Ventures AI'}</strong>
+    <p>{fr ? `Mis à jour le ${updated}. Chaque chiffre vient de la page officielle de l’outil ; ce qui n’est pas confirmé est marqué « à venir » ou « estimé ».` : `Updated ${updated}. Every figure comes from the tool's official page; anything unconfirmed is marked “coming soon” or “estimated”.`}</p>
+    <p><a href={`/${lang}/#methode`}>{fr ? 'Notre méthode d’évaluation →' : 'Our review methodology →'}</a></p>
+  </div>
+</aside>
