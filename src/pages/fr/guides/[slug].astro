@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import EmailCapture from '../../../components/EmailCapture.astro';
+import { guides, altSlug } from '../../../data/guides';
+export function getStaticPaths() {
+  return guides.fr.map((g) => ({ params: { slug: g.frontmatter.slug }, props: { g } }));
+}
+const { g } = Astro.props;
+const fm = g.frontmatter;
+const Content = g.Content;
+---
+<BaseLayout lang="fr" title={fm.title} description={fm.description} pathWithoutLang={`/guides/${fm.slug}/`} altPathWithoutLang={`/guides/${altSlug('fr', fm.slug)}/`}>
+  <article class="wrap prose guide">
+    <p class="muted small"><a href="/fr/">Accueil</a> / <a href="/fr/guides/">Guides</a> · Mis à jour {fm.updated}</p>
+    <Content />
+  </article>
+  <EmailCapture lang="fr" />
+</BaseLayout>
+<style is:global>
+  .guide { max-width: 760px; line-height: 1.65; }
+  .guide table { border-collapse: collapse; width: 100%; font-size: .9rem; display: block; overflow-x: auto; }
+  .guide th, .guide td { border: 1px solid #ccc; padding: .4rem .6rem; vertical-align: top; }
+</style>
