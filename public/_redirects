@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects (static). GitHub Pages ignores this file.
+# Keep GH Pages live; when CF becomes canonical, add 301s from old host via CF rules.
+# Internal aliases
+/methode /fr/methode/ 302
+/how-we-evaluate /en/how-we-evaluate/ 302
+/ /fr/ 302

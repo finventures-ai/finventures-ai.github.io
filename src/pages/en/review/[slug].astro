@@ -58,6 +58,7 @@ const yn = (v: unknown) => v === true ? (fr ? 'Oui' : 'Yes') : v === false ? (fr
       <div class="card verdict">
         <p><strong>{tool.name[lang]}</strong> — {tool.tagline[lang]}. {fr ? `Prix de départ : ${price.toLowerCase()}.` : `Starting price: ${price.toLowerCase()}.`}</p>
         <p class="muted small">{fr ? `Indice de fiabilité ${score} % : part des données confirmées sur les pages officielles.` : `Confidence index ${score}%: share of data points confirmed on official pages.`}</p>
+        <p class="muted small">{fr ? `Méthode : données publiques, docs et tarifs officiels. Pas d’essai terrain inventé. ` : `Method: public data, official docs and pricing. No invented hands-on testing. `}<a href={fr ? "/fr/methode/" : "/en/how-we-evaluate/"}>{fr ? "Détails →" : "Details →"}</a></p>
         <a class="cta" href={`/go/${tool.brand}/`} rel="sponsored nofollow">{tool.goUrl ? copy.tryCta : copy.tryCtaSoon}</a>
       </div>
 

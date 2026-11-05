@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'en' as const;
+---
+<BaseLayout
+  lang={lang}
+  title="How we evaluate"
+  description="How Fin Ventures AI evaluates tools: public data, official docs, pricing, and free trials only when they were actually run."
+  pathWithoutLang="/how-we-evaluate/"
+  altPathWithoutLang="/methode/"
+>
+  <article class="prose">
+    <h1>How we evaluate</h1>
+    <p class="lead">We do not claim to have hands-on tested every tool for weeks. Each review states where the numbers come from.</p>
+
+    <h2>What we use</h2>
+    <ol>
+      <li><strong>Public data</strong> — pricing pages, product pages, affiliate terms and official FAQs, with the read date.</li>
+      <li><strong>Official documentation</strong> — help guides, plan limits and refund policies published by the vendor.</li>
+      <li><strong>Pricing</strong> — USD amounts shown on the official page; anything unconfirmed is labelled “coming soon”, “estimated” or “unverified”.</li>
+      <li><strong>Free trial</strong> — only when a trial was actually opened and used for that page. Otherwise we say so.</li>
+    </ol>
+
+    <h2>What we do not do</h2>
+    <ul>
+      <li>Invent a hands-on test or a personal experience score that did not happen.</li>
+      <li>Copy the merchant’s listing without added value (tables, labels, alternatives, limits).</li>
+      <li>Present a source-confidence index as a product trial score.</li>
+    </ul>
+
+    <h2>Confidence index</h2>
+    <p>The score on some pages measures the <strong>share of data points confirmed</strong> on official pages (verified / estimated / coming soon). It is <em>not</em> a “we tested this for 30 days” rating.</p>
+
+    <h2>Affiliation</h2>
+    <p>Fin Ventures AI is an affiliate site. If you buy through a <code>/go/</code> link, we may earn a commission at no extra cost to you. The disclosure appears at the top of every page.</p>
+
+    <h2>Updates</h2>
+    <p>We aim for a weekly review of pricing and terms for featured tools. The update date is shown on every review and guide.</p>
+
+    <p class="muted small">Last revised: November 5, 2026 (America/Toronto).</p>
+  </article>
+</BaseLayout>

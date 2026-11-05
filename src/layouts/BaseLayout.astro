@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import Disclosure from '../components/Disclosure.astro';
 import { site, type Lang } from '../data/i18n';
 import { siteConfig } from '../data/siteConfig';
+import { isIndexedPath } from '../data/indexPolicy';
 
 interface Props {
   lang: Lang;
@@ -17,7 +18,9 @@ interface Props {
   wide?: boolean;
   bodyClass?: string;
 }
-const { lang, title, description, pathWithoutLang = '/', noindex = siteConfig.noindex, altPathWithoutLang, bodyClass = '' } = Astro.props;
+const { lang, title, description, pathWithoutLang = '/', altPathWithoutLang, bodyClass = '' } = Astro.props;
+const indexed = isIndexedPath(pathWithoutLang);
+const noindex = Astro.props.noindex ?? (siteConfig.noindex || !indexed);
 const canonical = new URL(`/${lang}${pathWithoutLang === '/' ? '/' : pathWithoutLang}`, Astro.site);
 const alt = lang === 'fr' ? 'en' : 'fr';
 const altPath = altPathWithoutLang ?? pathWithoutLang;
@@ -37,7 +40,7 @@ const fullTitle = `${title} | ${site.name}`;
     <link rel="alternate" hreflang={lang} href={canonical} />
     <link rel="alternate" hreflang={alt} href={altUrl} />
     <link rel="alternate" hreflang="x-default" href={new URL('/fr/', Astro.site)} />
-    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    {noindex && <meta name="robots" content="noindex,follow" />}
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />

@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'fr' as const;
+---
+<BaseLayout
+  lang={lang}
+  title="Notre méthode d’évaluation"
+  description="Comment Fin Ventures AI évalue les outils : données publiques, documentation, tarifs et essais gratuits seulement s’ils ont vraiment été faits."
+  pathWithoutLang="/methode/"
+  altPathWithoutLang="/how-we-evaluate/"
+>
+  <article class="prose">
+    <h1>Notre méthode d’évaluation</h1>
+    <p class="lead">Nous ne prétendons pas avoir testé chaque outil pendant des semaines. Chaque avis indique clairement d’où viennent les chiffres.</p>
+
+    <h2>Ce que nous utilisons</h2>
+    <ol>
+      <li><strong>Données publiques</strong> — pages de prix, pages produit, conditions d’affiliation et FAQ officielles, avec la date de lecture.</li>
+      <li><strong>Documentation officielle</strong> — guides d’aide, limites de forfaits, politiques de remboursement publiées par le vendeur.</li>
+      <li><strong>Tarifs</strong> — montants affichés en USD sur la page officielle ; tout montant non confirmé est marqué « à venir », « estimé » ou « non vérifié ».</li>
+      <li><strong>Essai gratuit</strong> — seulement si un essai a vraiment été ouvert et utilisé pour cette page. Sinon, nous le disons.</li>
+    </ol>
+
+    <h2>Ce que nous ne faisons pas</h2>
+    <ul>
+      <li>Inventer un « test terrain » ou une note d’expérience personnelle non réalisée.</li>
+      <li>Copier la fiche du marchand sans valeur ajoutée (tableaux, libellés, alternatives, limites).</li>
+      <li>Présenter un indice de fiabilité des sources comme une note d’essai produit.</li>
+    </ul>
+
+    <h2>Indice de fiabilité</h2>
+    <p>Le score affiché sur certaines pages mesure la <strong>part des données confirmées</strong> sur les pages officielles (vérifié / estimé / à venir). Ce n’est <em>pas</em> une note « j’ai testé l’outil 30 jours ».</p>
+
+    <h2>Affiliation</h2>
+    <p>Fin Ventures AI est un site d’affiliation. Si vous achetez via un lien <code>/go/</code>, nous pouvons recevoir une commission, sans frais supplémentaires pour vous. La divulgation apparaît en haut de chaque page.</p>
+
+    <h2>Mises à jour</h2>
+    <p>Nous visons une revue hebdomadaire des prix et des conditions des outils mis de l’avant. La date de mise à jour est affichée sur chaque avis et guide.</p>
+
+    <p class="muted small">Dernière révision de cette page : 5 novembre 2026 (America/Toronto).</p>
+  </article>
+</BaseLayout>

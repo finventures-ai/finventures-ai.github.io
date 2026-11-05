@@ -93,7 +93,7 @@ Une semaine plus tard, une seule question : votre page d'inscription est-elle en
 
 Si oui, ajoutez un mot-clé anglais de niche sous votre prochaine vidéo (ex. LIST ou EMAIL) et envoyez le lien en privé. Si non, le plus rapide reste le plan gratuit de Systeme.io (page + courriels, sans carte) : https://finventures-ai.github.io/go/systemeio/
 
-La semaine prochaine, je vous envoie un outil testé. Vous pouvez vous désabonner en tout temps avec le lien ci-dessous.
+La semaine prochaine, je vous envoie un outil analysé (sources officielles). Vous pouvez vous désabonner en tout temps avec le lien ci-dessous.
 
 Pierre
 

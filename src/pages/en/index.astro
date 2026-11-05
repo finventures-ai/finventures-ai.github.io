@@ -63,10 +63,10 @@ const gl = guides[lang].slice(0, 3);
   </section>
 
   <section class="section" id="methode">
-    <h2>{fr ? 'Notre méthode' : 'Our methodology'}</h2>
+    <div class="section-head"><h2>{fr ? 'Notre méthode' : 'Our methodology'}</h2><a href={fr ? '/fr/methode/' : '/en/how-we-evaluate/'}>{fr ? 'Page complète →' : 'Full page →'}</a></div>
     <div class="grid2">
       <div class="card"><h3>1. {fr ? 'Sources officielles' : 'Official sources'}</h3><p class="muted">{fr ? 'Prix, forfaits et conditions relevés sur la page officielle, avec le lien cité.' : 'Pricing, plans and terms read from the official page, with the link cited.'}</p></div>
-      <div class="card"><h3>2. {fr ? 'Libellés honnêtes' : 'Honest labels'}</h3><p class="muted">{fr ? 'Chaque donnée est marquée vérifiée, estimée ou à venir. L’indice de fiabilité en découle.' : 'Every data point is labelled verified, estimated or coming soon. The confidence index is derived from it.'}</p></div>
+      <div class="card"><h3>2. {fr ? 'Libellés honnêtes' : 'Honest labels'}</h3><p class="muted">{fr ? 'Chaque donnée est marquée vérifiée, estimée ou à venir. L’indice de fiabilité en découle — ce n’est pas une note d’essai terrain.' : 'Every data point is labelled verified, estimated or coming soon. The confidence index is derived from it — not a hands-on trial score.'}</p></div>
       <div class="card"><h3>3. {fr ? 'Mises à jour' : 'Updates'}</h3><p class="muted">{fr ? 'Revue hebdomadaire des prix et des conditions ; la date de mise à jour est affichée.' : 'Weekly review of pricing and terms; the update date is shown.'}</p></div>
     </div>
   </section>

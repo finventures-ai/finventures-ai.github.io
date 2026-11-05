@@ -1,0 +1,5 @@
+# Optional: used only if deploying via `wrangler pages deploy dist`.
+# Preferred path: Cloudflare dashboard → Pages → Connect Git (see reports/p1/cloudflare-setup.md).
+name = "finventures-ai"
+compatibility_date = "2026-11-05"
+pages_build_output_dir = "dist"

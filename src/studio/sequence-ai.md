@@ -85,7 +85,7 @@ Bonjour {{PRENOM}},
 
 La pile à 0 $ : un assistant IA gratuit pour écrire, un outil vidéo en plan gratuit, et Systeme.io gratuit pour la page de capture et les courriels : https://finventures-ai.github.io/go/systemeio/
 
-La semaine prochaine : un outil testé, chaque semaine. Désabonnement en un clic ci-dessous.
+La semaine prochaine : un outil analysé à partir des pages officielles, chaque semaine. Désabonnement en un clic ci-dessous.
 
 Pierre
 
