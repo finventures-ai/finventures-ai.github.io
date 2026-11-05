@@ -345,21 +345,21 @@ export const tools: Tool[] = [
     ],
     commission: {
       summary: {
-        fr: '60 % à vie, attribution à vie ; min. 30 $ ; libre et instantané',
-        en: '60% lifetime, lifetime attribution; $30 min; free instant signup',
+        fr: '60 % récurrent à vie ; retenue 30 jours ; min. 30 $ ; payé le 10 (PayPal ou virement)',
+        en: '60% recurring for life; 30-day hold; $30 min; paid on the 10th (PayPal or bank transfer)',
       },
-      detail: '60% lifetime recurring; lifetime attribution; PayPal/wire on 10th',
+      detail: '60% recurring for life; 30-day hold; $30 minimum; paid on the 10th via PayPal or bank transfer',
       cookieDays: null,
       payoutMinUsd: 30,
       label: 'VERIFIED',
-      source: 'https://systeme.io/affiliate-program',
+      source: 'https://help.systeme.io/article/162',
     },
     features: [
       { key: 'free_plan', fr: 'Plan gratuit', en: 'Free plan', value: true, label: 'VERIFIED' },
       { key: 'courses', fr: 'Cours en ligne', en: 'Online courses', value: true, label: 'TODO' },
       { key: 'instant_affiliate', fr: 'Affiliation instantanée', en: 'Instant affiliate', value: true, label: 'VERIFIED' },
     ],
-    goUrl: null,
+    goUrl: 'https://systeme.io/?sa=sa02856809642aa218261378d850c4bdec1bdd0574',
   },
   {
     slug: 'clickfunnels',

@@ -11,7 +11,10 @@ export function getStaticPaths() {
 const brand = Astro.params.brand!;
 const tool = tools.find((x) => x.brand === brand)!;
 /** Affiliate when approved; otherwise official vendor page. */
-const target = tool.goUrl ?? tool.website;
+const base = tool.goUrl ?? tool.website;
+const withUtm = (u: string, c: string) => { const x = new URL(u); x.searchParams.set('utm_source','finventures'); x.searchParams.set('utm_medium','site'); x.searchParams.set('utm_campaign',c); return x.toString(); };
+const target = tool.goUrl ? withUtm(base, 'go-' + brand) : base;
+const isAff = !!tool.goUrl;
 const copy = t.fr;
 ---
 <!doctype html>
@@ -23,13 +26,23 @@ const copy = t.fr;
     <meta http-equiv="refresh" content={`0;url=${target}`} />
     <link rel="canonical" href={target} />
     <title>{tool.name.fr} — {site.name}</title>
-    <script define:vars={{ target }}>
-      location.replace(target);
+    <script define:vars={{ target, isAff }}>
+      let dest = target;
+      try {
+        if (isAff && document.referrer) {
+          const r = new URL(document.referrer);
+          if (r.host === location.host) {
+            const page = r.pathname.replace(/^\/|\/$/g, '').replace(/\//g, '-') || 'home';
+            const u = new URL(target); u.searchParams.set('utm_campaign', page); dest = u.toString();
+          }
+        }
+      } catch (e) {}
+      location.replace(dest);
     </script>
   </head>
   <body style="font-family:system-ui,sans-serif;background:#0b1220;color:#e8eefc;max-width:640px;margin:3rem auto;padding:0 1rem;line-height:1.5">
-    <p>{copy.goPendingBody}</p>
-    <p><a href={target} rel="noopener noreferrer" style="color:#5b8cff">{tool.name.fr} — site officiel</a></p>
+    <p>{isAff ? 'Redirection vers le site officiel (lien affilié)…' : copy.goPendingBody}</p>
+    <p><a href={target} rel="noopener noreferrer" style="color:#5b8cff">{tool.name.fr} — site officiel{isAff ? ' (lien affilié)' : ''}</a></p>
     <p style="font-size:0.85rem;color:#9aa8c7;margin-top:1.5rem">{copy.disclosure}</p>
   </body>
 </html>
