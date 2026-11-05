@@ -148,4 +148,4 @@ Kit automatically moves you to the next tier; MailerLite locks sending above 250
 **Is a free tool good enough to make money?**
 Yes for starting: the limits above are enough to run a lead magnet, a welcome sequence and a weekly newsletter. Upgrade when a limit blocks revenue.
 
-*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · mailing address: PO box coming soon. Last checked: November 5, 2026.*
+*Fin Ventures AI · Fin Ventures AI, 520 Fort-St-Louis Blvd, PO Box 8010, Boucherville, QC J4B 1S0, Canada. Last checked: November 5, 2026.*

@@ -153,4 +153,4 @@ Systeme.io est l'un des rares outils dont le plan gratuit n'est pas un simple ap
 
 [Commencer avec le plan gratuit de Systeme.io](https://finventures-ai.github.io/go/systemeio/)
 
-*Fin Ventures AI · Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir. Dernière vérification : 5 novembre 2026.*
+*Fin Ventures AI · Fin Ventures AI, 520, boul. Fort-St-Louis, case postale 8010, Boucherville (QC) J4B 1S0, Canada. Dernière vérification : 5 novembre 2026.*

@@ -11,7 +11,7 @@ const fr = lang === 'fr';
     <div>
       <a class="brand" href={`/${lang}/`}><Logo /><span>Fin Ventures <b>AI</b></span></a>
       <p class="small">{fr ? 'Avis et comparatifs indépendants d’outils courriel, tunnels et IA.' : 'Independent reviews and comparisons of email, funnel and AI tools.'}</p>
-      <p class="small">{copy.casl} <em>{site.mailingAddress}</em></p>
+      <p class="small">{copy.casl} <em>{site.mailingAddress[lang]}</em></p>
       <p class="small">{site.email}</p>
     </div>
     <div>

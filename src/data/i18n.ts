@@ -4,8 +4,11 @@ export const site = {
   name: 'FIN Ventures AI',
   domain: 'fin.ventures.ai',
   owner: 'Pierre Bernier',
-  /** Placeholder until mailing address provided */
-  mailingAddress: 'Fin Ventures AI — Boucherville (QC), Canada · adresse postale : case postale à venir',
+  /** CASL/LCAP mailing address (PO Box 8010 — never personal home address) */
+  mailingAddress: {
+    fr: 'Fin Ventures AI, 520, boul. Fort-St-Louis, case postale 8010, Boucherville (QC) J4B 1S0, Canada',
+    en: 'Fin Ventures AI, 520 Fort-St-Louis Blvd, PO Box 8010, Boucherville, QC J4B 1S0, Canada',
+  },
   email: 'fin.ventures.ai@gmail.com',
 };
 
