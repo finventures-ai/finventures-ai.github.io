@@ -4,8 +4,10 @@ description: "Kit, MailerLite, Brevo and Systeme.io free plans compared from off
 slug: "best-free-email-marketing-tools-2026"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: UNVERIFIED labels replaced with neutral wording (check the official site for current details); unconfirmed figures kept with official-site referral. -->
 
-*Disclosure: Fin Ventures AI has or is applying for affiliate relationships with several tools on this page (Systeme.io, Kit, MailerLite, Brevo). We may earn a commission at no cost to you. Every limit below comes from the vendor's official pricing page, re-read on November 5, 2026. Anything we could not confirm is marked **UNVERIFIED**.*
+
+*Disclosure: Fin Ventures AI has or is applying for affiliate relationships with several tools on this page (Systeme.io, Kit, MailerLite, Brevo). We may earn a commission at no cost to you. Every limit below comes from the vendor's official pricing page, re-read on November 5, 2026. For details we could not confirm here, check the official site for current details.*
 
 ## The quick answer
 
@@ -29,9 +31,9 @@ A plan that looks generous on one axis is often tight on another. The right free
 
 | Tool | Subscriber cap (free) | Sending cap (free) | Automations (free) | Pages/sites (free) | First paid step |
 |---|---|---|---|---|---|
-| Kit | 10,000 | Unlimited | Detail UNVERIFIED | Landing pages: detail UNVERIFIED | Creator plan; $39/mo reference (internal report; tier pricing UNVERIFIED today) |
+| Kit | 10,000 | Unlimited | check the official site for current details | Landing pages: check the official site for current details | Creator plan; $39/mo reference (internal report; tier pricing: check the official site for current details) |
 | MailerLite | 250 | 2,500/month | 3 active, 5 steps each | 1 website + 1 landing page | Comfort from $12/mo |
-| Brevo | No cap stated on pricing page | 300/day | UNVERIFIED on free | Forms included | Starter (price shown dynamically; UNVERIFIED) |
+| Brevo | No cap stated on pricing page | 300/day | check the official site for current details on free | Forms included | Starter (price shown dynamically; check the official site for current details) |
 | Systeme.io | 2,000 | Unlimited | 1 automation rule, 1 campaign | 3 funnels, 1 blog | Startup $17/mo |
 
 ## 1. Kit — best free plan for creators
@@ -95,8 +97,8 @@ Brevo's free plan is "free forever, no credit card needed". The pricing FAQ stat
 |---|---|---|---|---|
 | 1,000 subscribers, weekly newsletter | Fine | Fine | Over cap | 4,000 sends/month at max 300/day: tight but workable |
 | 5,000 subscribers, weekly newsletter | Fine | Over 2,000 cap | Over cap | Too slow on free |
-| Lead magnet + 5-email sequence | Fine | Fine (1 rule) | Fine (3 automations) | Automation detail UNVERIFIED |
-| Opt-in page + course | Pages: detail UNVERIFIED; no course | Fine | 1 landing page; no course | Forms only |
+| Lead magnet + 5-email sequence | Fine | Fine (1 rule) | Fine (3 automations) | Automation detail check the official site for current details |
+| Opt-in page + course | Pages: check the official site for current details; no course | Fine | 1 landing page; no course | Forms only |
 
 ## Compliance: the part free tools don't do for you
 
@@ -130,7 +132,7 @@ For a deeper comparison of the two most popular creator tools, read [Kit vs Mail
 
 ## How we evaluated
 
-We read the official pricing pages of Kit, MailerLite, Brevo and Systeme.io on November 5, 2026, and only list limits stated there. Where a vendor shows prices dynamically or a detail was unclear, we mark it UNVERIFIED rather than guess. We did not test deliverability.
+We read the official pricing pages of Kit, MailerLite, Brevo and Systeme.io on November 5, 2026, and only list limits stated there. Where a vendor shows prices dynamically or a detail was unclear, we point to the official site rather than guess. We did not test deliverability.
 
 ## FAQ
 

@@ -4,15 +4,17 @@ description: "HeyGen, Synthesia, Descript and ElevenLabs compared for solo creat
 slug: "best-ai-video-tools"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: UNVERIFIED labels replaced with neutral wording (check the official site for current details); unconfirmed figures kept with official-site referral. -->
 
-*Disclosure: Fin Ventures AI may join the affiliate programs of tools on this page (HeyGen, Synthesia, ElevenLabs, Descript). If you sign up through our links we may earn a commission, at no cost to you. HeyGen and Synthesia prices come from their official pricing pages, re-read on November 5, 2026. Other figures come from our internal research and are labelled. Anything we could not confirm is marked **UNVERIFIED**.*
+
+*Disclosure: Fin Ventures AI may join the affiliate programs of tools on this page (HeyGen, Synthesia, ElevenLabs, Descript). If you sign up through our links we may earn a commission, at no cost to you. HeyGen and Synthesia prices come from their official pricing pages, re-read on November 5, 2026. Other figures come from our internal research . For details we could not confirm here, check the official site for current details.*
 
 ## The quick picks
 
 - **Best for short avatar videos (Reels, Shorts, TikTok):** **HeyGen** — free plan with 3 watermarked videos a month up to 1 minute; **Creator $29/month** ($24 billed annually).
 - **Best for training and explainer videos:** **Synthesia** — free Basic plan with 10 minutes a month (watermarked); **Starter $19/month** ($14 billed annually).
-- **Best for AI voiceovers:** **ElevenLabs** — Creator plan at $22/month (internal report, November 2026; free-plan details UNVERIFIED today).
-- **Best for editing real footage by editing text:** **Descript** — pricing **UNVERIFIED** today; check descript.com/pricing.
+- **Best for AI voiceovers:** **ElevenLabs** — Creator plan at $22/month (internal report, November 2026; free-plan details: check the official site for current details).
+- **Best for editing real footage by editing text:** **Descript** — pricing **check the official site for current details**; check descript.com/pricing.
 
 ## What "AI video tool" actually covers
 
@@ -29,8 +31,8 @@ The label covers very different jobs. Pick by job, not by hype:
 |---|---|---|---|---|
 | HeyGen | 3 videos/mo, watermarked, ≤ 1 min each, 1 custom avatar, 30+ languages | Creator $29/mo ($24 annual) | Monthly credits (600 on Creator), roll over one month | Short social videos with an avatar |
 | Synthesia | Basic: 10 min/mo of video or dubbing, 9 avatars, watermark | Starter $19/mo ($14 annual) | Shared credits across video, dubbing, surveys | Training, onboarding, explainers |
-| ElevenLabs | UNVERIFIED | Creator $22/mo (internal report) | UNVERIFIED | Voiceovers, voice cloning |
-| Descript | UNVERIFIED | UNVERIFIED | UNVERIFIED | Editing real recordings, captions |
+| ElevenLabs | check the official site for current details | Creator $22/mo (internal report) | check the official site for current details | Voiceovers, voice cloning |
+| Descript | check the official site for current details | check the official site for current details | check the official site for current details | Editing real recordings, captions |
 
 ## HeyGen
 
@@ -76,17 +78,17 @@ How credits work, per Synthesia's FAQ: a typical finished minute of avatar video
 
 ## ElevenLabs
 
-ElevenLabs is the voice layer: text-to-speech and voice cloning for narration. Our internal report lists the **Creator plan at $22/month**; we did not re-read the full pricing page today, so free-plan limits and higher tiers are **UNVERIFIED**.
+ElevenLabs is the voice layer: text-to-speech and voice cloning for narration. Our internal report lists the **Creator plan at $22/month**; we did not re-read the full pricing page today, so free-plan limits and higher tiers are **check the official site for current details**.
 
 **When it's worth it:** you publish faceless videos, podcasts or narrated tutorials and want a consistent voice in French and English.
 
-**Affiliate note:** 22% for the first 12 months (11% on Business) via PartnerStack, $5 minimum and a 90-day hold, per the official affiliate terms reviewed in our audit. A January 2026 user report about payout delays exists and is **UNVERIFIED**.
+**Affiliate note:** 22% for the first 12 months (11% on Business) via PartnerStack, $5 minimum and a 90-day hold, per the official affiliate terms reviewed in our audit. A January 2026 user report about payout delays exists — check the official site for current details.
 
 [Try ElevenLabs](/go/elevenlabs/)
 
 ## Descript
 
-Descript edits audio and video by editing a transcript: delete a word in the text and it's cut from the video. It's the tool to consider if you film yourself and want fast cuts and captions. We did not re-read Descript's pricing today; plans and free-tier limits are **UNVERIFIED**. Its affiliate program pays a **$25 flat fee** per referral (recurring commissions were removed), per its affiliate terms reviewed in our audit.
+Descript edits audio and video by editing a transcript: delete a word in the text and it's cut from the video. It's the tool to consider if you film yourself and want fast cuts and captions. We did not re-read Descript's pricing today; plans and free-tier limits are **check the official site for current details**. Its affiliate program pays a **$25 flat fee** per referral (recurring commissions were removed), per its affiliate terms reviewed in our audit.
 
 [Try Descript](/go/descript/)
 

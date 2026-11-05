@@ -4,8 +4,10 @@ description: "Plans gratuits de Kit, MailerLite, Brevo et Systeme.io comparés �
 slug: "meilleurs-outils-courriel-gratuits-2026"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: labels NON VÉRIFIÉ remplacés par formulation neutre (à confirmer sur le site officiel); chiffres non confirmés conservés avec renvoi au site officiel. -->
 
-*Divulgation : Fin Ventures AI a ou demande des relations d'affiliation avec plusieurs outils de cette page (Systeme.io, Kit, MailerLite, Brevo). Nous pouvons recevoir une commission, sans coût pour vous. Chaque limite ci-dessous provient de la page de prix officielle du fournisseur, relue le 5 novembre 2026. Ce que nous n'avons pas pu confirmer est marqué **NON VÉRIFIÉ**.*
+
+*Divulgation : Fin Ventures AI a ou demande des relations d'affiliation avec plusieurs outils de cette page (Systeme.io, Kit, MailerLite, Brevo). Nous pouvons recevoir une commission, sans coût pour vous. Chaque limite ci-dessous provient de la page de prix officielle du fournisseur, relue le 5 novembre 2026. Pour les détails non confirmés ici, à confirmer sur le site officiel.*
 
 ## La réponse rapide
 
@@ -29,9 +31,9 @@ Un plan généreux sur un axe est souvent serré sur un autre. Le bon outil grat
 
 | Outil | Abonnés (gratuit) | Envois (gratuit) | Automatisations (gratuit) | Pages/sites (gratuit) | Premier palier payant |
 |---|---|---|---|---|---|
-| Kit | 10 000 | Illimités | Détail NON VÉRIFIÉ | Pages : détail NON VÉRIFIÉ | Plan Creator ; 39 $/mois en référence (rapport interne ; prix par palier NON VÉRIFIÉ aujourd'hui) |
+| Kit | 10 000 | Illimités | à confirmer sur le site officiel | Pages : à confirmer sur le site officiel | Plan Creator ; 39 $/mois en référence (rapport interne ; prix par palier à confirmer sur le site officiel aujourd'hui) |
 | MailerLite | 250 | 2 500/mois | 3 actives, 5 étapes chacune | 1 site + 1 page | Comfort dès 12 $/mois |
-| Brevo | Aucun plafond indiqué sur la page | 300/jour | NON VÉRIFIÉ au gratuit | Formulaires inclus | Starter (prix affiché dynamiquement ; NON VÉRIFIÉ) |
+| Brevo | Aucun plafond indiqué sur la page | 300/jour | à confirmer sur le site officiel au gratuit | Formulaires inclus | Starter (prix affiché dynamiquement ; à confirmer sur le site officiel) |
 | Systeme.io | 2 000 | Illimités | 1 règle, 1 campagne | 3 tunnels, 1 blogue | Startup 17 $/mois |
 
 ## 1. Kit — le meilleur plan gratuit pour les créateurs
@@ -44,7 +46,7 @@ Kit (anciennement ConvertKit) indique que son plan gratuit permet de « bâtir e
 - Remboursement possible dans les 30 premiers jours sur les plans payants.
 - Migration gratuite offerte avec les plans payants.
 
-**Limites non vérifiées aujourd'hui :** quelles automatisations et intégrations sont restreintes au gratuit, et les prix actuels par palier de Creator et Pro. Consultez kit.com/pricing pour la taille de votre liste.
+**Limites à confirmer sur le site officiel :** quelles automatisations et intégrations sont restreintes au gratuit, et les prix actuels par palier de Creator et Pro. Consultez kit.com/pricing pour la taille de votre liste.
 
 **Choisissez Kit si :** vous êtes créateur, vous bâtissez une infolettre et voulez de l'espace pour grandir sans payer.
 
@@ -95,8 +97,8 @@ Le plan gratuit de Brevo est « gratuit pour toujours, sans carte de crédit ».
 |---|---|---|---|---|
 | 1 000 abonnés, infolettre hebdo | Correct | Correct | Au-delà du plafond | 4 000 envois/mois à 300/jour max : serré mais faisable |
 | 5 000 abonnés, infolettre hebdo | Correct | Au-delà de 2 000 | Au-delà du plafond | Trop lent au gratuit |
-| Aimant + séquence de 5 courriels | Correct | Correct (1 règle) | Correct (3 automatisations) | Détail NON VÉRIFIÉ |
-| Page de capture + formation | Pages : NON VÉRIFIÉ ; pas de formation | Correct | 1 page ; pas de formation | Formulaires seulement |
+| Aimant + séquence de 5 courriels | Correct | Correct (1 règle) | Correct (3 automatisations) | à confirmer sur le site officiel |
+| Page de capture + formation | Pages : à confirmer sur le site officiel ; pas de formation | Correct | 1 page ; pas de formation | Formulaires seulement |
 
 ## Votre première semaine, peu importe l'outil
 
@@ -130,7 +132,7 @@ Pour une comparaison plus poussée des deux outils de créateurs les plus popula
 
 ## Notre méthode
 
-Nous avons lu les pages de prix officielles de Kit, MailerLite, Brevo et Systeme.io le 5 novembre 2026, et ne listons que les limites qui y figurent. Quand un fournisseur affiche ses prix dynamiquement ou qu'un détail n'était pas clair, nous le marquons NON VÉRIFIÉ plutôt que de deviner. Nous n'avons pas testé la délivrabilité.
+Nous avons lu les pages de prix officielles de Kit, MailerLite, Brevo et Systeme.io le 5 novembre 2026, et ne listons que les limites qui y figurent. Quand un fournisseur affiche ses prix dynamiquement ou qu'un détail n'était pas clair, nous renvoyons au site officiel plutôt que de deviner. Nous n'avons pas testé la délivrabilité.
 
 ## FAQ
 

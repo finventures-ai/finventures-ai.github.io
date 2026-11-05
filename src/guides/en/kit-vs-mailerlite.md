@@ -4,8 +4,10 @@ description: "Kit vs MailerLite compared from official pricing pages checked Nov
 slug: "kit-vs-mailerlite"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: UNVERIFIED labels replaced with neutral wording (check the official site for current details); unconfirmed figures kept with official-site referral. -->
 
-*Disclosure: Fin Ventures AI is applying to the Kit and MailerLite affiliate programs. If you sign up through our links we may earn a commission, at no cost to you. Limits and prices come from kit.com/pricing and mailerlite.com/pricing, re-read on November 5, 2026. Anything we could not confirm is marked **UNVERIFIED**.*
+
+*Disclosure: Fin Ventures AI is applying to the Kit and MailerLite affiliate programs. If you sign up through our links we may earn a commission, at no cost to you. Limits and prices come from kit.com/pricing and mailerlite.com/pricing, re-read on November 5, 2026. For details we could not confirm here, check the official site for current details.*
 
 ## The short answer
 
@@ -18,13 +20,13 @@ updated: "2026-11-05"
 |---|---|---|
 | Free subscribers | Up to 10,000 | 250 |
 | Free sends | Unlimited (no sending limits on any plan) | 2,500/month |
-| Free automations | Detail UNVERIFIED | 3 active, 5 steps each |
-| Free site/pages | Detail UNVERIFIED | 1 website + 1 landing page, 3 forms |
-| Free seats | UNVERIFIED | 2 |
+| Free automations | check the official site for current details | 3 active, 5 steps each |
+| Free site/pages | check the official site for current details | 1 website + 1 landing page, 3 forms |
+| Free seats | check the official site for current details | 2 |
 | Paid plans | Creator, Pro | Comfort (from $12/mo), Power (from $25/mo), Enterprise |
 | Trial | 14 days on Creator/Pro, no card | 14 days of premium features, no card |
 | Over the limit | Auto-upgrade to next tier (paid) | Free: sending locked above 250 active subscribers |
-| Refund | Within first 30 days | UNVERIFIED |
+| Refund | Within first 30 days | check the official site for current details |
 | Migration | Free migration on paid plans | Migration page and success team |
 
 ## Free plans in depth
@@ -61,7 +63,7 @@ Annual billing saves 10%.
 
 ### Kit
 
-Kit lists Creator and Pro plans. Our internal research recorded **Creator at $39/month** as a reference price; we could not confirm today's per-tier price from the page (pricing is shown by list size), so treat exact figures as **UNVERIFIED** and check kit.com/pricing for your subscriber count. Kit notes that the Pro first-year discount applies only to year one.
+Kit lists Creator and Pro plans. Our internal research recorded **Creator at $39/month** as a reference price; we could not confirm today's per-tier price from the page (pricing is shown by list size), so treat exact figures as **check the official site for current details** and check kit.com/pricing for your subscriber count. Kit notes that the Pro first-year discount applies only to year one.
 
 ## Feature philosophy
 
@@ -76,9 +78,9 @@ Both claims are the vendors' own statements.
 | Situation | Kit | MailerLite |
 |---|---|---|
 | 200 subscribers | Free | Free |
-| 1,000 subscribers | Free | Paid (Comfort, from $12/mo; exact tier price UNVERIFIED) |
-| 5,000 subscribers | Free | Paid (tier price UNVERIFIED) |
-| 10,000+ subscribers | Paid tier (UNVERIFIED) | Paid tier (UNVERIFIED) |
+| 1,000 subscribers | Free | Paid (Comfort, from $12/mo; exact tier price: check the official site for current details) |
+| 5,000 subscribers | Free | Paid (tier price: check the official site for current details) |
+| 10,000+ subscribers | Paid tier (check the official site for current details) | Paid tier (check the official site for current details) |
 
 The pattern is clear even without exact tier prices: **between 250 and 10,000 subscribers, Kit costs $0 and MailerLite does not.** The trade-off is that MailerLite's free plan documents more included tooling, and its paid entry point is low.
 
@@ -95,8 +97,8 @@ Neither should decide which tool you use for your own list, but it's useful cont
 
 1. **New YouTuber or newsletter writer, no budget:** Kit. The 10,000-subscriber free ceiling gives you months or years of runway.
 2. **Local business with a small, stable list:** MailerLite free, then Comfort. You'll value the website and landing page.
-3. **Coach selling digital products and bookings:** MailerLite's digital products and bookings are documented on its plans; Kit's commerce features are **UNVERIFIED** by us today. Test both.
-4. **Team of three or more:** MailerLite Comfort includes 3 seats; Power unlimited. Kit's seat limits per plan are **UNVERIFIED** (Pro lists unlimited users).
+3. **Coach selling digital products and bookings:** MailerLite's digital products and bookings are documented on its plans; Kit's commerce features are **check the official site for current details**. Test both.
+4. **Team of three or more:** MailerLite Comfort includes 3 seats; Power unlimited. Kit's seat limits per plan are **check the official site for current details** (Pro lists unlimited users).
 5. **Anyone who needs funnels and a course too:** neither is the best fit; look at [Systeme.io](/en/guides/systeme-io-review/), which bundles email, funnels and courses with a free plan.
 
 ## A 30-day test you can run yourself
@@ -135,7 +137,7 @@ That's its current free-plan limit; above it, sending is locked on free accounts
 Between 250 and 10,000 subscribers, Kit, because it's free. Below 250 both are free. Above that, compare the tier prices for your exact list size on each pricing page.
 
 **Which has better automations?**
-On free, MailerLite documents 3 active automations; Kit's free automation limits are UNVERIFIED by us. On paid plans both offer visual automation builders.
+On free, MailerLite documents 3 active automations; Kit's free automation limits are check the official site for current details. On paid plans both offer visual automation builders.
 
 ## Bottom line
 

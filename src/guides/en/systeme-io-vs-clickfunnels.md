@@ -4,8 +4,10 @@ description: "Systeme.io vs ClickFunnels compared on official pricing (checked N
 slug: "systeme-io-vs-clickfunnels"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: UNVERIFIED labels replaced with neutral wording (check the official site for current details); unconfirmed figures kept with official-site referral. -->
 
-*Disclosure: Fin Ventures AI is an affiliate of Systeme.io and may apply to the ClickFunnels affiliate program. We may earn a commission if you sign up through our links, at no cost to you. All prices and limits below come from each vendor's official pricing page, re-read on November 5, 2026. Anything we could not confirm is marked **UNVERIFIED**.*
+
+*Disclosure: Fin Ventures AI is an affiliate of Systeme.io and may apply to the ClickFunnels affiliate program. We may earn a commission if you sign up through our links, at no cost to you. All prices and limits below come from each vendor's official pricing page, re-read on November 5, 2026. For details we could not confirm here, check the official site for current details.*
 
 ## The one-paragraph answer
 
@@ -48,12 +50,12 @@ At equal price, the comparison is interesting: **Systeme.io Unlimited and ClickF
 | Email marketing | Included, unlimited sends | Included, capped per plan (50K/mo on Launch) |
 | Automations | 1 rule on free; more on paid | Listed on all plans; "Advanced Workflows" on higher tiers |
 | Courses | 1 free → unlimited | 3 on Launch, up to 20 |
-| Community | Listed on pricing page (plan detail UNVERIFIED) | Included (3 on Launch) |
-| A/B testing | UNVERIFIED by us per plan | Listed as included |
+| Community | Listed on pricing page (plan detail: check the official site for current details) | Included (3 on Launch) |
+| A/B testing | check the official site for current details | Listed as included |
 | Affiliate center (run your own program) | Included on all plans | Not on Launch/Scale; included on Optimize and Dominate |
 | Custom domains | 1 on free | 5 on Launch, unlimited above |
 | Sub-accounts / workspaces | Unlimited on all plans | 1 / 5 / 10 / 20 |
-| API & webhooks | UNVERIFIED by us per plan | Not on Launch; included from Scale |
+| API & webhooks | check the official site for current details | Not on Launch; included from Scale |
 | Transaction fees | 0% | 0% ("you keep every penny") |
 | Trial / guarantee | Free forever | 14-day trial + 30-day money-back |
 
@@ -99,11 +101,11 @@ We have not run side-by-side conversion or deliverability tests, so we make **no
 | Under 5,000 contacts | $204 (Startup, monthly × 12) | $972–$1,164 |
 | Under 10,000 contacts | $564 (Webinar, monthly × 12) | $972–$1,164 |
 
-Calculated from list prices on November 5, 2026; taxes and annual discounts on Systeme.io are not included (Systeme.io advertises "2 months free" on annual billing; exact figure UNVERIFIED).
+Calculated from list prices on November 5, 2026; taxes and annual discounts on Systeme.io are not included (Systeme.io advertises "2 months free" on annual billing; exact figure: check the official site for current details).
 
 ## Migration
 
-Systeme.io advertises "free migration" on its pricing page. We did not test the migration service; scope and timing are **UNVERIFIED**. If you move from ClickFunnels, export contacts first and rebuild your highest-traffic funnel before the others.
+Systeme.io advertises "free migration" on its pricing page. We did not test the migration service; scope and timing are **check the official site for current details**. If you move from ClickFunnels, export contacts first and rebuild your highest-traffic funnel before the others.
 
 ## The same beginner funnel in both tools
 

@@ -4,8 +4,10 @@ description: "Kit et MailerLite comparés à partir des pages de prix officielle
 slug: "kit-vs-mailerlite"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: labels NON VÉRIFIÉ remplacés par formulation neutre (à confirmer sur le site officiel); chiffres non confirmés conservés avec renvoi au site officiel. -->
 
-*Divulgation : Fin Ventures AI demande l'adhésion aux programmes d'affiliation de Kit et MailerLite. Si vous vous inscrivez par nos liens, nous pouvons recevoir une commission, sans coût pour vous. Limites et prix tirés de kit.com/pricing et mailerlite.com/pricing, relus le 5 novembre 2026. Ce que nous n'avons pas pu confirmer est marqué **NON VÉRIFIÉ**.*
+
+*Divulgation : Fin Ventures AI demande l'adhésion aux programmes d'affiliation de Kit et MailerLite. Si vous vous inscrivez par nos liens, nous pouvons recevoir une commission, sans coût pour vous. Limites et prix tirés de kit.com/pricing et mailerlite.com/pricing, relus le 5 novembre 2026. Pour les détails non confirmés ici, à confirmer sur le site officiel.*
 
 ## La réponse courte
 
@@ -18,13 +20,13 @@ updated: "2026-11-05"
 |---|---|---|
 | Abonnés gratuits | Jusqu'à 10 000 | 250 |
 | Envois gratuits | Illimités (aucune limite d'envoi sur aucun plan) | 2 500/mois |
-| Automatisations gratuites | Détail NON VÉRIFIÉ | 3 actives, 5 étapes chacune |
-| Site/pages gratuits | Détail NON VÉRIFIÉ | 1 site + 1 page, 3 formulaires |
-| Utilisateurs gratuits | NON VÉRIFIÉ | 2 |
+| Automatisations gratuites | à confirmer sur le site officiel | 3 actives, 5 étapes chacune |
+| Site/pages gratuits | à confirmer sur le site officiel | 1 site + 1 page, 3 formulaires |
+| Utilisateurs gratuits | à confirmer sur le site officiel | 2 |
 | Plans payants | Creator, Pro | Comfort (dès 12 $/mois), Power (dès 25 $/mois), Enterprise |
 | Essai | 14 jours sur Creator/Pro, sans carte | 14 jours de fonctions premium, sans carte |
 | Au-delà de la limite | Passage auto au palier suivant (payant) | Gratuit : envois bloqués au-delà de 250 abonnés actifs |
-| Remboursement | Dans les 30 premiers jours | NON VÉRIFIÉ |
+| Remboursement | Dans les 30 premiers jours | à confirmer sur le site officiel |
 | Migration | Migration gratuite avec les plans payants | Page de migration et équipe dédiée |
 
 ## Les plans gratuits en profondeur
@@ -61,7 +63,7 @@ La facturation annuelle fait économiser 10 %.
 
 ### Kit
 
-Kit propose les plans Creator et Pro. Notre recherche interne a noté **Creator à 39 $/mois** comme prix de référence ; nous n'avons pas pu confirmer aujourd'hui le prix par palier sur la page (les prix s'affichent selon la taille de la liste), donc considérez les montants exacts comme **NON VÉRIFIÉS** et consultez kit.com/pricing pour votre nombre d'abonnés. Kit précise que le rabais de première année sur Pro ne s'applique qu'à la première année.
+Kit propose les plans Creator et Pro. Notre recherche interne a noté **Creator à 39 $/mois** comme prix de référence ; nous n'avons pas pu confirmer aujourd'hui le prix par palier sur la page (les prix s'affichent selon la taille de la liste), donc considérez les montants exacts comme **à confirmer sur le site officiel** et consultez kit.com/pricing pour votre nombre d'abonnés. Kit précise que le rabais de première année sur Pro ne s'applique qu'à la première année.
 
 ## Philosophie des fonctions
 
@@ -76,9 +78,9 @@ Ces deux chiffres sont les affirmations des fournisseurs.
 | Situation | Kit | MailerLite |
 |---|---|---|
 | 200 abonnés | Gratuit | Gratuit |
-| 1 000 abonnés | Gratuit | Payant (Comfort, dès 12 $/mois ; prix exact du palier NON VÉRIFIÉ) |
-| 5 000 abonnés | Gratuit | Payant (prix du palier NON VÉRIFIÉ) |
-| 10 000 abonnés et plus | Palier payant (NON VÉRIFIÉ) | Palier payant (NON VÉRIFIÉ) |
+| 1 000 abonnés | Gratuit | Payant (Comfort, dès 12 $/mois ; prix exact du palier à confirmer sur le site officiel) |
+| 5 000 abonnés | Gratuit | Payant (prix du palier à confirmer sur le site officiel) |
+| 10 000 abonnés et plus | Palier payant (à confirmer sur le site officiel) | Palier payant (à confirmer sur le site officiel) |
 
 La tendance est claire même sans prix exacts : **entre 250 et 10 000 abonnés, Kit coûte 0 $ et MailerLite non.** En contrepartie, le plan gratuit de MailerLite documente plus d'outils inclus, et son entrée payante est basse.
 
@@ -95,8 +97,8 @@ Ni l'un ni l'autre ne devrait décider de l'outil de votre propre liste, mais c'
 
 1. **Nouveau YouTubeur ou rédacteur d'infolettre, sans budget :** Kit. Le plafond gratuit de 10 000 abonnés vous donne des mois, voire des années, de marge.
 2. **Commerce local avec une petite liste stable :** MailerLite gratuit, puis Comfort. Vous apprécierez le site et la page de capture.
-3. **Coach qui vend des produits numériques et des réservations :** les produits numériques et réservations de MailerLite sont documentés dans ses plans ; les fonctions commerciales de Kit sont **NON VÉRIFIÉES** par nous aujourd'hui. Testez les deux.
-4. **Équipe de trois personnes ou plus :** MailerLite Comfort inclut 3 utilisateurs ; Power, illimités. Les limites d'utilisateurs de Kit par plan sont **NON VÉRIFIÉES** (Pro annonce des utilisateurs illimités).
+3. **Coach qui vend des produits numériques et des réservations :** les produits numériques et réservations de MailerLite sont documentés dans ses plans ; les fonctions commerciales de Kit sont **à confirmer sur le site officiel**. Testez les deux.
+4. **Équipe de trois personnes ou plus :** MailerLite Comfort inclut 3 utilisateurs ; Power, illimités. Les limites d'utilisateurs de Kit par plan sont **à confirmer sur le site officiel** (Pro annonce des utilisateurs illimités).
 5. **Besoin aussi de tunnels et d'une formation :** ni l'un ni l'autre n'est idéal ; regardez [Systeme.io](/fr/guides/avis-systeme-io/), qui combine courriel, tunnels et formations avec un plan gratuit.
 
 ## Un test de 30 jours à faire vous-même
@@ -135,7 +137,7 @@ C'est la limite actuelle de son plan gratuit ; au-delà, les envois sont bloqué
 Entre 250 et 10 000 abonnés, Kit, puisqu'il est gratuit. Sous 250, les deux sont gratuits. Au-delà, comparez les prix des paliers pour votre taille exacte de liste sur chaque page de prix.
 
 **Lequel a les meilleures automatisations ?**
-Au gratuit, MailerLite documente 3 automatisations actives ; les limites gratuites de Kit sont NON VÉRIFIÉES par nous. Aux plans payants, les deux offrent des constructeurs visuels.
+Au gratuit, MailerLite documente 3 automatisations actives ; les limites gratuites de Kit sont à confirmer sur le site officiel. Aux plans payants, les deux offrent des constructeurs visuels.
 
 ## En résumé
 

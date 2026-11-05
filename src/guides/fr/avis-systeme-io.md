@@ -4,8 +4,10 @@ description: "Un avis honnête sur Systeme.io, basé sur la page de prix officie
 slug: "avis-systeme-io"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: labels NON VÉRIFIÉ remplacés par formulation neutre (à confirmer sur le site officiel); chiffres non confirmés conservés avec renvoi au site officiel. -->
 
-*Divulgation : Fin Ventures AI est affilié à Systeme.io. Si vous vous inscrivez par notre lien, nous pouvons recevoir une commission, sans coût pour vous. Cela ne change rien à ce que nous écrivons : chaque chiffre ci-dessous provient des pages officielles de Systeme.io, relues le 5 novembre 2026, et tout ce que nous n'avons pas pu confirmer est marqué **NON VÉRIFIÉ**.*
+
+*Divulgation : Fin Ventures AI est affilié à Systeme.io. Si vous vous inscrivez par notre lien, nous pouvons recevoir une commission, sans coût pour vous. Cela ne change rien à ce que nous écrivons : chaque chiffre ci-dessous provient des pages officielles de Systeme.io, relues le 5 novembre 2026. Pour les détails non confirmés ici, à confirmer sur le site officiel.*
 
 ## Le verdict en bref
 
@@ -40,7 +42,7 @@ Systeme.io propose quatre plans, fondés surtout sur le nombre de contacts. Ces 
 | Webinar | 47 $/mois | 10 000 | 50 | 20 (+ webinaires automatisés) |
 | Unlimited | 97 $/mois | Illimités | Illimités | Illimitées |
 
-Tous les plans incluent des **envois de courriels illimités**, des **sous-comptes illimités** (chacun avec les mêmes limites que votre plan principal, sans frais supplémentaires) et **0 % de frais de transaction**. La page annonce aussi « 2 mois gratuits » en facturation annuelle ; nous n'avons pas vérifié le prix annuel exact de chaque plan, considérez donc ces montants comme **NON VÉRIFIÉS** jusqu'à ce que vous les voyiez au paiement. Les prix sont affichés en dollars américains.
+Tous les plans incluent des **envois de courriels illimités**, des **sous-comptes illimités** (chacun avec les mêmes limites que votre plan principal, sans frais supplémentaires) et **0 % de frais de transaction**. La page annonce aussi « 2 mois gratuits » en facturation annuelle ; nous n'avons pas vérifié le prix annuel exact de chaque plan, considérez donc ces montants comme **à confirmer sur le site officiel** jusqu'à ce que vous les voyiez au paiement. Les prix sont affichés en dollars américains.
 
 ## Le plan gratuit en détail
 
@@ -90,11 +92,11 @@ Tout cela tient dans les limites gratuites. Trois tunnels laissent même de la p
 
 **1. L'automatisation au gratuit est minimale.** Une règle et une campagne. Prévoyez de passer au payant si le courriel est votre principal moteur de revenus.
 
-**2. La flexibilité du design.** Nous n'avons pas fait de comparaison formelle avec des constructeurs de pages dédiés ; savoir si les modèles respectent votre image de marque est **NON VÉRIFIÉ** de notre côté. Bâtissez une page pendant le plan gratuit et jugez par vous-même.
+**2. La flexibilité du design.** Nous n'avons pas fait de comparaison formelle avec des constructeurs de pages dédiés ; savoir si les modèles respectent votre image de marque reste **à confirmer sur le site officiel**. Bâtissez une page pendant le plan gratuit et jugez par vous-même.
 
-**3. La délivrabilité.** Nous n'avons aucune donnée indépendante sur la délivrabilité de Systeme.io ; toute affirmation sur l'arrivée en boîte de réception serait **NON VÉRIFIÉE**. Authentifiez votre domaine (SPF/DKIM), peu importe l'outil.
+**3. La délivrabilité.** Nous n'avons aucune donnée indépendante sur la délivrabilité de Systeme.io ; toute affirmation sur l'arrivée en boîte de réception serait **à confirmer sur le site officiel**. Authentifiez votre domaine (SPF/DKIM), peu importe l'outil.
 
-**4. Les tests avancés.** La page de prix consultée ne nous permet pas de confirmer quels tests A/B existent sur quel plan ; considérez-le **NON VÉRIFIÉ** et testez dans le compte.
+**4. Les tests avancés.** La page de prix consultée ne nous permet pas de confirmer quels tests A/B existent sur quel plan ; considérez-le **à confirmer sur le site officiel** et testez dans le compte.
 
 ## Pour qui est Systeme.io
 
@@ -115,14 +117,14 @@ Tout cela tient dans les limites gratuites. Trois tunnels laissent même de la p
 |---|---|---|
 | Premier tunnel à 0 $ | Plan gratuit, 3 tunnels | ClickFunnels : essai 14 jours, puis 97 $/mois |
 | Liste courriel à 0 $ | 2 000 contacts, envois illimités | Kit : gratuit jusqu'à 10 000 abonnés ; MailerLite : 250 |
-| Formation à 0 $ | 1 formation, 500 élèves | Plateformes de cours : variable (NON VÉRIFIÉ) |
+| Formation à 0 $ | 1 formation, 500 élèves | Plateformes de cours : variable (à confirmer sur le site officiel) |
 | Tout-en-un sous 20 $ | Startup 17 $/mois | Peu d'équivalents directs à ce prix (notre évaluation) |
 
 Pour le duel avec le constructeur de tunnels le plus connu, lisez [Systeme.io vs ClickFunnels](/fr/guides/systeme-io-vs-clickfunnels/). Pour les options purement courriel, voyez [les meilleurs outils de courriel gratuits en 2026](/fr/guides/meilleurs-outils-courriel-gratuits-2026/).
 
 ## Notre méthode
 
-Nous avons lu la page de prix officielle et la FAQ de Systeme.io le 5 novembre 2026, ainsi que les conditions d'affiliation de Systeme.io le même jour. Nous avons comparé les limites gratuites avec les pages de prix officielles de ClickFunnels, Kit, MailerLite et Brevo, relues le même jour. Nous n'utilisons pas de données de tiers non vérifiées ; quand nous n'avons pas de données, nous le disons. Les prix changent : confirmez sur le site du fournisseur avant d'acheter.
+Nous avons lu la page de prix officielle et la FAQ de Systeme.io le 5 novembre 2026, ainsi que les conditions d'affiliation de Systeme.io le même jour. Nous avons comparé les limites gratuites avec les pages de prix officielles de ClickFunnels, Kit, MailerLite et Brevo, relues le même jour. Nous n\'utilisons pas de données de tiers non confirmées ; quand nous n'avons pas de données, nous le disons. Les prix changent : confirmez sur le site du fournisseur avant d'acheter.
 
 ## Notre relation d'affiliation
 

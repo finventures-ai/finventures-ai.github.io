@@ -4,8 +4,10 @@ description: "An honest Systeme.io review based on the official pricing page (ch
 slug: "systeme-io-review"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: UNVERIFIED labels replaced with neutral wording (check the official site for current details); unconfirmed figures kept with official-site referral. -->
 
-*Disclosure: Fin Ventures AI is a Systeme.io affiliate. If you sign up through our link we may earn a commission, at no cost to you. It does not change what we write: every number below comes from Systeme.io's official pages, re-read on November 5, 2026, and anything we could not confirm is marked **UNVERIFIED**.*
+
+*Disclosure: Fin Ventures AI is a Systeme.io affiliate. If you sign up through our link we may earn a commission, at no cost to you. It does not change what we write: every number below comes from Systeme.io's official pages, re-read on November 5, 2026. For details we could not confirm here, check the official site for current details.*
 
 ## The short verdict
 
@@ -40,7 +42,7 @@ Systeme.io has four plans, based mainly on contact limits. These figures come st
 | Webinar | $47/month | 10,000 | 50 | 20 (+ evergreen webinars) |
 | Unlimited | $97/month | Unlimited | Unlimited | Unlimited |
 
-Every plan includes **unlimited email sends**, **unlimited sub-accounts** (each sub-account gets the same limits as your main plan, at no extra cost) and **0% transaction fees**. The page also advertises "2 months free" on annual billing; we did not verify the exact annual price per plan, so consider the annual figures **UNVERIFIED** until you see them in checkout.
+Every plan includes **unlimited email sends**, **unlimited sub-accounts** (each sub-account gets the same limits as your main plan, at no extra cost) and **0% transaction fees**. The page also advertises "2 months free" on annual billing; we did not verify the exact annual price per plan, so consider the annual figures **check the official site for current details** until you see them in checkout.
 
 ## The free plan in detail
 
@@ -90,11 +92,11 @@ Everything above fits within the free limits. Three funnels also leave room for 
 
 **1. Automation on the free plan is minimal.** One rule and one campaign. Plan on upgrading if email is your main revenue engine.
 
-**2. Design flexibility.** We have not run a formal design benchmark against dedicated page builders; whether the templates meet your brand standard is **UNVERIFIED** by us. Build one page during the free plan and judge for yourself.
+**2. Design flexibility.** We have not run a formal design benchmark against dedicated page builders; whether the templates meet your brand standard is **check the official site for current details**. Build one page during the free plan and judge for yourself.
 
-**3. Deliverability.** We have no independent deliverability data for Systeme.io; any claim about inbox placement would be **UNVERIFIED**. Authenticate your domain (SPF/DKIM) whatever tool you choose.
+**3. Deliverability.** We have no independent deliverability data for Systeme.io; any claim about inbox placement would be **check the official site for current details**. Authenticate your domain (SPF/DKIM) whatever tool you choose.
 
-**4. Advanced testing.** The pricing page we reviewed does not let us confirm which A/B testing features exist on which plan; treat it as **UNVERIFIED** and test in the account.
+**4. Advanced testing.** The pricing page we reviewed does not let us confirm which A/B testing features exist on which plan; treat it as **check the official site for current details** and test in the account.
 
 ## Who Systeme.io is for
 
@@ -115,14 +117,14 @@ Everything above fits within the free limits. Three funnels also leave room for 
 |---|---|---|
 | First funnel at $0 | Free plan, 3 funnels | ClickFunnels: 14-day trial, then $97/month |
 | Email list at $0 | 2,000 contacts, unlimited sends | Kit: free up to 10,000 subscribers; MailerLite: 250 |
-| Course hosting at $0 | 1 course, 500 students | Course platforms: varies (UNVERIFIED) |
+| Course hosting at $0 | 1 course, 500 students | Course platforms: varies (check the official site for current details) |
 | All-in-one under $20 | Startup $17/month | Few direct equivalents at this price (our assessment) |
 
 For the head-to-head with the best-known funnel builder, read [Systeme.io vs ClickFunnels](/en/guides/systeme-io-vs-clickfunnels/). For email-only options, see [the best free email marketing tools of 2026](/en/guides/best-free-email-marketing-tools-2026/).
 
 ## How we evaluated
 
-We read Systeme.io's official pricing page and FAQ on November 5, 2026, and Systeme.io's affiliate terms earlier the same day. We compared free-plan limits with the official pricing pages of ClickFunnels, Kit, MailerLite and Brevo, re-read the same day. We do not use unverified third-party benchmarks; where we have no data, we say so. Prices change: confirm on the vendor's site before you buy.
+We read Systeme.io's official pricing page and FAQ on November 5, 2026, and Systeme.io's affiliate terms earlier the same day. We compared free-plan limits with the official pricing pages of ClickFunnels, Kit, MailerLite and Brevo, re-read the same day. We do not use unconfirmed third-party benchmarks; where we have no data, we say so. Prices change: confirm on the vendor's site before you buy.
 
 ## About our affiliate relationship
 

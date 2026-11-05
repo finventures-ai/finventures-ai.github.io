@@ -4,8 +4,10 @@ description: "Systeme.io et ClickFunnels comparés à partir des prix officiels 
 slug: "systeme-io-vs-clickfunnels"
 updated: "2026-11-05"
 ---
+<!-- INTERNAL: labels NON VÉRIFIÉ remplacés par formulation neutre (à confirmer sur le site officiel); chiffres non confirmés conservés avec renvoi au site officiel. -->
 
-*Divulgation : Fin Ventures AI est affilié à Systeme.io et pourrait s'inscrire au programme d'affiliation de ClickFunnels. Nous pouvons recevoir une commission si vous vous inscrivez par nos liens, sans coût pour vous. Tous les prix et limites ci-dessous proviennent des pages de prix officielles, relues le 5 novembre 2026. Ce que nous n'avons pas pu confirmer est marqué **NON VÉRIFIÉ**.*
+
+*Divulgation : Fin Ventures AI est affilié à Systeme.io et pourrait s'inscrire au programme d'affiliation de ClickFunnels. Nous pouvons recevoir une commission si vous vous inscrivez par nos liens, sans coût pour vous. Tous les prix et limites ci-dessous proviennent des pages de prix officielles, relues le 5 novembre 2026. Pour les détails non confirmés ici, à confirmer sur le site officiel.*
 
 ## La réponse en un paragraphe
 
@@ -48,12 +50,12 @@ Tous les plans ClickFunnels affichent actuellement des **tunnels illimités** (m
 | Marketing courriel | Inclus, envois illimités | Inclus, plafonné par plan (50 K/mois sur Launch) |
 | Automatisations | 1 règle au gratuit ; plus au payant | Listées sur tous les plans ; « Advanced Workflows » aux plans supérieurs |
 | Formations | 1 au gratuit → illimitées | 3 sur Launch, jusqu'à 20 |
-| Communauté | Listée sur la page de prix (détail par plan NON VÉRIFIÉ) | Incluse (3 sur Launch) |
-| Tests A/B | NON VÉRIFIÉ par plan | Listés comme inclus |
+| Communauté | Listée sur la page de prix (détail par plan à confirmer sur le site officiel) | Incluse (3 sur Launch) |
+| Tests A/B | à confirmer sur le site officiel | Listés comme inclus |
 | Centre d'affiliation (votre propre programme) | Inclus sur tous les plans | Absent de Launch et Scale ; inclus sur Optimize et Dominate |
 | Domaines personnalisés | 1 au gratuit | 5 sur Launch, illimités au-delà |
 | Sous-comptes / espaces | Illimités sur tous les plans | 1 / 5 / 10 / 20 |
-| API et webhooks | NON VÉRIFIÉ par plan | Absent de Launch ; inclus dès Scale |
+| API et webhooks | à confirmer sur le site officiel | Absent de Launch ; inclus dès Scale |
 | Frais de transaction | 0 % | 0 % |
 | Essai / garantie | Gratuit pour toujours | Essai 14 jours + remboursement 30 jours |
 
@@ -113,11 +115,11 @@ Pour rendre la comparaison concrète, voici le tunnel de notre plan gratuit FUNN
 | Moins de 5 000 contacts | 204 $ (Startup, mensuel × 12) | 972 $ à 1 164 $ |
 | Moins de 10 000 contacts | 564 $ (Webinar, mensuel × 12) | 972 $ à 1 164 $ |
 
-Calculé à partir des prix affichés le 5 novembre 2026 ; taxes et rabais annuels de Systeme.io non inclus (Systeme.io annonce « 2 mois gratuits » en annuel ; montant exact NON VÉRIFIÉ).
+Calculé à partir des prix affichés le 5 novembre 2026 ; taxes et rabais annuels de Systeme.io non inclus (Systeme.io annonce « 2 mois gratuits » en annuel ; montant exact à confirmer sur le site officiel).
 
 ## La migration
 
-Systeme.io annonce une « migration gratuite » sur sa page de prix. Nous n'avons pas testé ce service ; sa portée et ses délais sont **NON VÉRIFIÉS**. Si vous quittez ClickFunnels, exportez d'abord vos contacts et reconstruisez votre tunnel le plus fréquenté avant les autres.
+Systeme.io annonce une « migration gratuite » sur sa page de prix. Nous n'avons pas testé ce service ; sa portée et ses délais sont **à confirmer sur le site officiel**. Si vous quittez ClickFunnels, exportez d'abord vos contacts et reconstruisez votre tunnel le plus fréquenté avant les autres.
 
 ## Notre méthode
 

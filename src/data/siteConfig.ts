@@ -4,5 +4,5 @@
  */
 export const siteConfig = {
   /** When true, every page sends <meta name="robots" content="noindex,nofollow"> */
-  noindex: true,
+  noindex: false,
 } as const;
