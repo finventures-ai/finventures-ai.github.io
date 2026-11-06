@@ -19,10 +19,12 @@ const m = [
       <a class="magnet" href={`/downloads/${lang}/${x.f}.pdf`} download><b>📘 {x[lang][0]}</b><span>{x[lang][1]} · PDF</span></a>
     ))}
   </div>
-  <form onsubmit="return false;" aria-disabled="true">
-    <label class="sr" for={`em-${lang}`} style="position:absolute;left:-9999px">Email</label>
-    <input id={`em-${lang}`} type="email" name="email" placeholder={fr ? 'vous@exemple.com' : 'you@example.com'} disabled />
-    <button type="button" disabled>{fr ? 'Infolettre (bientôt)' : 'Newsletter (soon)'}</button>
-  </form>
-  <p class="fine">{fr ? 'Consentement exprès (LCAP). Désabonnement en un clic. Aucun envoi pour l’instant.' : 'Express consent (CASL). One-click unsubscribe. No sends yet.'}</p>
+  <div class="sio-embed" id="newsletter-form">
+    {fr ? (
+      <script is:inline id="form-script-tag-26083348" src="https://fin-ventures-ai.systeme.io/public/remote/page/464622661f49f05233b0ed9641b6d677c0a22243.js"></script>
+    ) : (
+      <script is:inline id="form-script-tag-26083440" src="https://fin-ventures-ai.systeme.io/public/remote/page/464625432f7ae642da581f7ef82fee47cfceb000.js"></script>
+    )}
+  </div>
+  <p class="fine">{fr ? 'Consentement exprès (LCAP). Désabonnement en un clic.' : 'Express consent (CASL). One-click unsubscribe.'}</p>
 </section>

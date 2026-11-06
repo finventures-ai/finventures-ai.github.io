@@ -142,6 +142,8 @@ tbody th{font-weight:650;background:color-mix(in srgb,var(--surface2) 50%,transp
 .capture input{flex:1;min-width:200px;padding:.8rem 1rem;border-radius:999px;border:0;font:inherit}
 .capture button{padding:.8rem 1.3rem;border-radius:999px;border:0;background:#111827;color:#fff;font-weight:700;opacity:.75;cursor:not-allowed;font:inherit}
 .capture .fine{font-size:.78rem;opacity:.75;margin-top:.6rem}
+.capture .sio-embed{margin-top:1rem;width:100%;min-height:240px}
+.capture .sio-embed iframe{max-width:100%;border:0;border-radius:12px;background:#fff}
 /* disclosure */
 .disclosure{font-size:.82rem;color:var(--muted);padding:.65rem .9rem;border:1px solid var(--border);border-radius:10px;background:var(--surface);margin:1rem 0}
 /* footer */
