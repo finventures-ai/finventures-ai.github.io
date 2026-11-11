@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Disclosure from '../components/Disclosure.astro';
+import CookieConsent from '../components/CookieConsent.astro';
 import { site, type Lang } from '../data/i18n';
 import { siteConfig } from '../data/siteConfig';
 import { isIndexedPath } from '../data/indexPolicy';
@@ -31,6 +32,7 @@ const fullTitle = `${title} | ${site.name}`;
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
+    <CookieConsent part="boot" />
     <meta name="google-site-verification" content="GTwv6dZqB08G95-0LWTGYnidbs2bSsqOIyz8NMNsbW4" />
     <meta name="p:domain_verify" content="81657f15932bf555a9f94a5211458510" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,6 +55,7 @@ const fullTitle = `${title} | ${site.name}`;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class={bodyClass}>
+    <CookieConsent part="banner" lang={lang} />
     <Header lang={lang} pathWithoutLang={altPath} />
     <slot name="hero" />
     <main class="wrap">

@@ -66,6 +66,11 @@ export const t = {
     alternatives: 'Alternatives',
     langSwitch: 'English',
     allReviews: 'Tous les avis',
+    cookieBannerLabel: 'Choix des cookies',
+    cookieBannerBody:
+      'Google Analytics mesure l’audience de ce site seulement si vous acceptez. Aucun cookie d’analyse n’est déposé avant ce choix, et la publicité reste désactivée.',
+    cookieAccept: 'Accepter',
+    cookieDecline: 'Refuser',
   },
   en: {
     homeTitle: 'Email, funnel and AI tool guides',
@@ -120,6 +125,11 @@ export const t = {
     alternatives: 'Alternatives',
     langSwitch: 'Français',
     allReviews: 'All reviews',
+    cookieBannerLabel: 'Cookie choice',
+    cookieBannerBody:
+      'Google Analytics measures this site’s audience only if you accept. No analytics cookies are set before that choice, and advertising stays off.',
+    cookieAccept: 'Accept',
+    cookieDecline: 'Decline',
   },
 } as const;
 

@@ -1,0 +1,39 @@
+---
+import { t, type Lang } from '../data/i18n';
+import { analytics } from '../data/siteConfig';
+
+interface Props {
+  lang?: Lang;
+  /** `boot` is the blocking head script. `banner` is the choice bar. */
+  part: 'boot' | 'banner';
+}
+
+const { lang = 'fr', part } = Astro.props;
+const copy = t[lang];
+---
+
+{
+  part === 'boot' && (
+    <script
+      is:inline
+      id="fv-consent-boot"
+      src="/fv-consent.js"
+      data-ga-id={analytics.measurementId}
+      data-storage-key={analytics.storageKey}
+    />
+  )
+}
+
+{
+  part === 'banner' && (
+    <div class="cookie-banner" role="region" aria-label={copy.cookieBannerLabel}>
+      <div class="cookie-banner-inner">
+        <p>{copy.cookieBannerBody}</p>
+        <div class="cookie-actions">
+          <button type="button" class="cookie-choice" onclick="fvSetConsent('granted')">{copy.cookieAccept}</button>
+          <button type="button" class="cookie-choice" onclick="fvSetConsent('denied')">{copy.cookieDecline}</button>
+        </div>
+      </div>
+    </div>
+  )
+}
