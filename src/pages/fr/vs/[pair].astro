@@ -1,18 +1,34 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import GuidePage from '../../../components/GuidePage.astro';
 import EmailCapture from '../../../components/EmailCapture.astro';
 import ToolLogo from '../../../components/ToolLogo.astro';
 import Toc from '../../../components/Toc.astro';
 import AuthorBox from '../../../components/AuthorBox.astro';
 import { t, labelText, publicPlanName } from '../../../data/i18n';
-import { comparisonPairs, pairSlug, getTool, categories } from '../../../data/tools';
+import { comparisonPairs, pairSlug, catalogPairSlug, getTool, categories } from '../../../data/tools';
+import { editorialComparison } from '../../../data/comparisons';
 import { dataScore, prosCons, startingPrice } from '../../../data/review';
 
 export function getStaticPaths() {
-  return comparisonPairs().map(({ a, b }) => ({ params: { pair: pairSlug(a, b) }, props: { aSlug: a.slug, bSlug: b.slug } }));
+  const paths = [];
+  for (const { a, b } of comparisonPairs()) {
+    const canonical = pairSlug(a, b);
+    const legacy = catalogPairSlug(a, b);
+    paths.push({ params: { pair: canonical }, props: { aSlug: a.slug, bSlug: b.slug, redirectTo: '' } });
+    if (legacy !== canonical) {
+      paths.push({
+        params: { pair: legacy },
+        props: { aSlug: a.slug, bSlug: b.slug, redirectTo: `/fr/vs/${canonical}/` },
+      });
+    }
+  }
+  return paths;
 }
-interface Props { aSlug: string; bSlug: string; }
-const { aSlug, bSlug } = Astro.props as Props;
+interface Props { aSlug: string; bSlug: string; redirectTo?: string; }
+const { aSlug, bSlug, redirectTo } = Astro.props as Props;
+if (redirectTo) return Astro.redirect(redirectTo);
+const editorial = editorialComparison('fr', Astro.params.pair ?? '');
 const lang = 'fr' as const;
 const copy = t[lang];
 const fr = lang === 'fr';
@@ -26,6 +42,7 @@ const yn = (v: unknown) => v === true ? '✓' : v === false ? '✕' : v == null 
 const cls = (v: unknown) => v === true ? 'yes' : v === false ? 'no' : '';
 const price = (tl: typeof a, p: { priceMonthlyUsd: number | null }) => p.priceMonthlyUsd == null ? copy.na : p.priceMonthlyUsd === 0 ? (fr ? 'Gratuit' : 'Free') : `$${p.priceMonthlyUsd}/${fr ? 'mois' : 'mo'}`;
 ---
+{editorial ? <GuidePage g={editorial} lang={lang} section="vs" /> : (
 <BaseLayout lang={lang} title={title} description={fr ? `${title} : prix, fonctions et différences clés, comparés à partir des pages officielles.` : `${title}: pricing, features and key differences, compared from official pages.`} pathWithoutLang={pathWithoutLang}>
   <section class="review-hero" slot="hero">
     <div class="wrap">
@@ -98,3 +115,4 @@ const price = (tl: typeof a, p: { priceMonthlyUsd: number | null }) => p.priceMo
   </div>
   <EmailCapture lang={lang} category={a.category} />
 </BaseLayout>
+)}

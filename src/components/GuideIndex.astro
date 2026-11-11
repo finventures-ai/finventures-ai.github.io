@@ -8,7 +8,7 @@ const { lang } = Astro.props;
 const fr = lang === 'fr';
 const list = guides[lang];
 ---
-<BaseLayout lang={lang} title="Guides" description={fr ? 'Guides complets : Systeme.io, outils courriel gratuits, Kit vs MailerLite, vidéo IA.' : 'In-depth guides: Systeme.io, free email tools, Kit vs MailerLite, AI video.'} pathWithoutLang="/guides/">
+<BaseLayout lang={lang} title="Guides" description={fr ? 'Guides de fond : plateformes courriel, tunnels de vente, vidéo IA et comparatifs sourcés.' : 'In-depth guides: email platforms, funnel builders, AI video and sourced comparisons.'} pathWithoutLang="/guides/">
   <section class="hero-home" slot="hero"><div class="wrap" style="padding-top:2.2rem;padding-bottom:2rem">
     <span class="pill">{list.length} guides</span>
     <h1>{fr ? 'Guides complets' : 'In-depth guides'}</h1>
