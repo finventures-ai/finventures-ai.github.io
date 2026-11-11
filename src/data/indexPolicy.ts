@@ -14,6 +14,13 @@ export const INDEXED_REVIEWS = [
 
 export const INDEXED_VS = [
   'gohighlevel-vs-systeme-io',
+  'brevo-vs-activecampaign',
+  'clickfunnels-vs-gohighlevel',
+  'kit-vs-activecampaign',
+  'kit-vs-brevo',
+  'mailerlite-vs-activecampaign',
+  'mailerlite-vs-brevo',
+  'synthesia-vs-heygen',
 ] as const;
 
 /** Path without lang prefix, always ending with / except root which is '/' */
@@ -59,4 +66,4 @@ export function sitemapInclude(url: string): boolean {
 
 /** Count of intentionally indexed locale pages (FR+EN pairs counted separately). */
 export const INDEXED_TARGET_NOTE =
-  'Homes (2) + guides index (2) + method (2) + categories (6) + 10 articles + 6 reviews×2 + 1 vs×2 ≈ 34–36';
+  'Homes (2) + guides index (2) + method (2) + categories (6) + guides (16) + reviews (12) + comparisons (16)';

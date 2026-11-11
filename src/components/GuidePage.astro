@@ -4,19 +4,30 @@ import EmailCapture from './EmailCapture.astro';
 import Toc from './Toc.astro';
 import AuthorBox from './AuthorBox.astro';
 import { altSlug } from '../data/guides';
+import { categories } from '../data/tools';
 import type { Lang } from '../data/i18n';
-interface Props { g: any; lang: Lang }
-const { g, lang } = Astro.props;
+interface Props { g: any; lang: Lang; section?: 'guides' | 'vs' }
+const { g, lang, section = 'guides' } = Astro.props;
 const fm = g.frontmatter;
 const Content = g.Content;
 const fr = lang === 'fr';
-const words = (g.rawContent?.() ?? '').split(/\s+/).length;
+const words = (g.rawContent?.() ?? '').split(/\s+/).filter(Boolean).length;
 const mins = Math.max(3, Math.round(words / 220));
+const pathWithoutLang = `/${section}/${fm.slug}/`;
+const altPathWithoutLang = section === 'guides'
+  ? `/guides/${altSlug(lang, fm.slug)}/`
+  : `/vs/${fm.slug}/`;
+const cat = categories.find((c) => c.id === fm.category);
+const sectionHref = section === 'vs' && cat ? `/${lang}/category/${cat.id}/` : `/${lang}/guides/`;
+const sectionLabel = section === 'vs'
+  ? (cat ? cat[lang] : (fr ? 'Comparatif' : 'Comparison'))
+  : 'Guides';
+const kind = section === 'vs' ? (fr ? 'Comparatif' : 'Comparison') : 'Guide';
 ---
-<BaseLayout lang={lang} title={fm.title} description={fm.description} pathWithoutLang={`/guides/${fm.slug}/`} altPathWithoutLang={`/guides/${altSlug(lang, fm.slug)}/`}>
+<BaseLayout lang={lang} title={fm.title} description={fm.description} pathWithoutLang={pathWithoutLang} altPathWithoutLang={altPathWithoutLang}>
   <section class="review-hero" slot="hero"><div class="wrap" style="max-width:calc(var(--prose) + 300px)">
-    <p class="crumbs"><a href={`/${lang}/`}>{fr ? 'Accueil' : 'Home'}</a> › <a href={`/${lang}/guides/`}>Guides</a></p>
-    <span class="pill" style="margin-top:1rem">Guide · {mins} min</span>
+    <p class="crumbs"><a href={`/${lang}/`}>{fr ? 'Accueil' : 'Home'}</a> › <a href={sectionHref}>{sectionLabel}</a></p>
+    <span class="pill" style="margin-top:1rem">{kind} · {mins} min</span>
     <h1 style="margin-top:.6rem">{fm.title}</h1>
     <p class="lead">{fm.description}</p>
     <div class="meta"><span>{fr ? 'Par Pierre Bernier' : 'By Pierre Bernier'}</span><span>{fr ? 'Mis à jour le' : 'Updated'} {fm.updated}</span></div>

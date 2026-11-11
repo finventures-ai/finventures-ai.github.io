@@ -661,6 +661,31 @@ export function comparisonPairs(cat?: Category): { a: Tool; b: Tool }[] {
   return pairs;
 }
 
+/**
+ * Editorial comparisons whose public slug is not catalog order.
+ * One URL per pair: category and review links use pairSlug(); the old
+ * catalog slug redirects to this one.
+ */
+const EDITORIAL_PAIR_SLUG: Record<string, string> = {
+  'activecampaign-vs-brevo': 'brevo-vs-activecampaign',
+  'activecampaign-vs-mailerlite': 'mailerlite-vs-activecampaign',
+  'brevo-vs-mailerlite': 'mailerlite-vs-brevo',
+  'gohighlevel-vs-clickfunnels': 'clickfunnels-vs-gohighlevel',
+};
+
+function orderedTools(a: Tool, b: Tool): [Tool, Tool] {
+  const ia = tools.findIndex((t) => t.slug === a.slug);
+  const ib = tools.findIndex((t) => t.slug === b.slug);
+  return ia <= ib ? [a, b] : [b, a];
+}
+
+/** Catalog-order slug (`earlier-vs-later`), before editorial aliases. */
+export function catalogPairSlug(a: Tool, b: Tool): string {
+  const [first, second] = orderedTools(a, b);
+  return `${first.slug}-vs-${second.slug}`;
+}
+
 export function pairSlug(a: Tool, b: Tool): string {
-  return `${a.slug}-vs-${b.slug}`;
+  const ordered = catalogPairSlug(a, b);
+  return EDITORIAL_PAIR_SLUG[ordered] ?? ordered;
 }
