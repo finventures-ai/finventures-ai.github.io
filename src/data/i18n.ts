@@ -34,6 +34,8 @@ export const t = {
     casl:
       'Conformité LCAP/CASL (Canada) et FTC (É.-U.) : consentement exprès requis pour les courriels marketing ; identification de l’expéditeur ; désabonnement en un clic. Adresse postale :',
     footerNav: 'Navigation',
+    footerNewsletters: 'Infolettres',
+    footerSocial: 'Réseaux',
     footerLegal: 'Légal',
     updated: 'Mis à jour',
     label: 'Libellé des données',
@@ -93,6 +95,8 @@ export const t = {
     casl:
       'CASL (Canada) and FTC (US) compliance: express consent required for marketing email; sender identification; one-click unsubscribe. Mailing address:',
     footerNav: 'Navigation',
+    footerNewsletters: 'Newsletters',
+    footerSocial: 'Social',
     footerLegal: 'Legal',
     updated: 'Updated',
     label: 'Data label',

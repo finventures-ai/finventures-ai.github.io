@@ -227,7 +227,7 @@ export const tools: Tool[] = [
     features: [
       { key: 'ecommerce', fr: 'Orienté e-commerce', en: 'Ecommerce-focused', value: true, label: 'TODO' },
     ],
-    goUrl: null,
+    goUrl: 'https://your.omnisend.com/4aNqLr',
   },
   {
     slug: 'mailerlite',
@@ -294,7 +294,7 @@ export const tools: Tool[] = [
       { key: 'funnels', fr: 'Tunnels', en: 'Funnels', value: true, label: 'TODO' },
       { key: 'phone', fr: 'Téléphonie', en: 'Phone system', value: true, label: 'TODO' },
     ],
-    goUrl: null,
+    goUrl: 'https://www.gohighlevel.com/?fp_ref=pierre-d4462a',
     flags: ['No self-referral / same IP (community reports)'],
   },
   {
@@ -391,7 +391,7 @@ export const tools: Tool[] = [
       { key: 'funnels', fr: 'Tunnels', en: 'Funnels', value: true, label: 'TODO' },
       { key: 'challenge', fr: 'Challenge OFA', en: 'OFA Challenge', value: true, label: 'TODO' },
     ],
-    goUrl: null,
+    goUrl: 'https://www.clickfunnels.com/signup-flow?aff=d69235ff3dcec1abb12c55346247bd316b9738e6b8254be55a57a7f125276b0a',
   },
   {
     slug: 'simvoly',
@@ -421,7 +421,7 @@ export const tools: Tool[] = [
     features: [
       { key: 'memberships', fr: 'Memberships', en: 'Memberships', value: true, label: 'TODO' },
     ],
-    goUrl: null,
+    goUrl: 'https://simvoly.com/a/kczvo',
   },
   // ——— AI ———
   {
@@ -638,6 +638,25 @@ export const tools: Tool[] = [
       { key: 'text_edit', fr: 'Édition par texte', en: 'Edit by text', value: true, label: 'TODO' },
     ],
     goUrl: null,
+  },
+];
+
+/**
+ * Approved affiliate redirects that are not catalog entries.
+ * `/go/[brand]` uses these when `brand` is absent from `tools`.
+ * If a catalog row is added later, set `goUrl` on that row and remove the duplicate here.
+ */
+export const goRedirects: {
+  brand: string;
+  name: { fr: string; en: string };
+  website: string;
+  goUrl: string;
+}[] = [
+  {
+    brand: 'opus',
+    name: { fr: 'Opus Clip', en: 'Opus Clip' },
+    website: 'https://opus.pro',
+    goUrl: 'https://opus.pro/?via=pierrezo',
   },
 ];
 
