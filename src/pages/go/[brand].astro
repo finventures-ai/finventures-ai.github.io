@@ -1,15 +1,15 @@
 ---
-import { tools } from '../../data/tools';
+import { goRedirects, tools } from '../../data/tools';
 import { site, t } from '../../data/i18n';
 import { siteConfig } from '../../data/siteConfig';
 
 export function getStaticPaths() {
-  const brands = Array.from(new Set(tools.map((x) => x.brand)));
+  const brands = Array.from(new Set([...tools.map((x) => x.brand), ...goRedirects.map((x) => x.brand)]));
   return brands.map((brand) => ({ params: { brand } }));
 }
 
 const brand = Astro.params.brand!;
-const tool = tools.find((x) => x.brand === brand)!;
+const tool = tools.find((x) => x.brand === brand) ?? goRedirects.find((x) => x.brand === brand)!;
 /** Affiliate when approved; otherwise official vendor page. */
 const base = tool.goUrl ?? tool.website;
 const withUtm = (u: string, c: string) => { const x = new URL(u); x.searchParams.set('utm_source','finventures'); x.searchParams.set('utm_medium','site'); x.searchParams.set('utm_campaign',c); return x.toString(); };

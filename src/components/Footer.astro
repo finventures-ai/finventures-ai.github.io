@@ -5,6 +5,22 @@ interface Props { lang: Lang; }
 const { lang } = Astro.props;
 const copy = t[lang];
 const fr = lang === 'fr';
+const newsletters = [
+  { href: 'https://inboxlab.substack.com', label: fr ? 'InboxLab (Courriel)' : 'InboxLab (Email)' },
+  { href: 'https://funnellabstudio.substack.com', label: fr ? 'FunnelLab (Tunnels)' : 'FunnelLab (Funnels)' },
+  { href: 'https://ailabfv.substack.com', label: fr ? 'AI Lab (IA)' : 'AI Lab (AI)' },
+];
+const socials = [
+  { href: 'https://www.youtube.com/@finventuresai', label: 'YouTube Fin Ventures AI' },
+  { href: 'https://www.youtube.com/@inboxlab-fv', label: 'YouTube InboxLab' },
+  { href: 'https://www.instagram.com/finventuresai/', label: 'Instagram' },
+  { href: 'https://www.tiktok.com/@venturesstudio295', label: 'TikTok' },
+  { href: 'https://www.facebook.com/profile.php?id=61596235923284', label: 'Facebook' },
+  { href: 'https://www.threads.com/@finventuresai', label: 'Threads' },
+  { href: 'https://x.com/FinVenturesAi', label: 'X' },
+  { href: 'https://www.linkedin.com/in/fin-ventures-ai-10b92a449/', label: 'LinkedIn' },
+  { href: 'https://www.pinterest.com/finventuresai/', label: 'Pinterest' },
+];
 ---
 <footer class="site-footer">
   <div class="wrap cols">
@@ -23,6 +39,22 @@ const fr = lang === 'fr';
         <li><a href={`/${lang}/category/ai/`}>{fr ? 'IA' : 'AI'}</a></li>
         <li><a href={`/${lang}/guides/`}>Guides</a></li>
         <li><a href={fr ? "/fr/methode/" : "/en/how-we-evaluate/"}>{fr ? "Méthode" : "How we evaluate"}</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>{copy.footerNewsletters}</strong>
+      <ul class="clean">
+        {newsletters.map((item) => (
+          <li><a href={item.href} rel="noopener noreferrer" target="_blank">{item.label}</a></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <strong>{copy.footerSocial}</strong>
+      <ul class="clean">
+        {socials.map((item) => (
+          <li><a href={item.href} rel="noopener noreferrer" target="_blank">{item.label}</a></li>
+        ))}
       </ul>
     </div>
     <div>

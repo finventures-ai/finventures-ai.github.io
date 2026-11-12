@@ -148,7 +148,8 @@ tbody th{font-weight:650;background:color-mix(in srgb,var(--surface2) 50%,transp
 .disclosure{font-size:.82rem;color:var(--muted);padding:.65rem .9rem;border:1px solid var(--border);border-radius:10px;background:var(--surface);margin:1rem 0}
 /* footer */
 .site-footer{margin-top:3rem;border-top:1px solid var(--border);background:var(--surface);padding:2.5rem 0 3rem;color:var(--muted);font-size:.9rem}
-.site-footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:2rem}
+.site-footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(12.5rem,1fr));gap:2rem 1.5rem}
+.site-footer ul.clean{margin:.4rem 0 0}
 @media(max-width:760px){.site-footer .cols{grid-template-columns:1fr}}
 /* cookie consent — both choices share .cookie-choice so they stay equal */
 .cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--surface);color:var(--text);border-top:1px solid var(--border);box-shadow:0 -4px 16px rgba(15,23,42,.08);padding:.7rem 1rem}
