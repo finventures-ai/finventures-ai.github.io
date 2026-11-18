@@ -32,6 +32,7 @@ export function isIndexedPath(pathWithoutLang: string): boolean {
   if (p === '/') return true;
   if (p === '/guides/') return true;
   if (p === '/methode/' || p === '/how-we-evaluate/') return true;
+  if (p === '/confidentialite/' || p === '/privacy/') return true;
   if (p.startsWith('/category/') && ['email', 'funnels', 'ai'].some((c) => p === `/category/${c}/`)) return true;
   if (p.startsWith('/guides/') && p !== '/guides/') return true; // cornerstone articles
   if (p.startsWith('/review/')) {
@@ -66,4 +67,4 @@ export function sitemapInclude(url: string): boolean {
 
 /** Count of intentionally indexed locale pages (FR+EN pairs counted separately). */
 export const INDEXED_TARGET_NOTE =
-  'Homes (2) + guides index (2) + method (2) + categories (6) + guides (16) + reviews (12) + comparisons (16)';
+  'Homes (2) + guides index (2) + method (2) + privacy (2) + categories (6) + guides (16) + reviews (12) + comparisons (16)';
