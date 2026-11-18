@@ -59,6 +59,9 @@ const socials = [
     </div>
     <div>
       <strong>{copy.footerLegal}</strong>
+      <ul class="clean">
+        <li><a href={fr ? "/fr/confidentialite/" : "/en/privacy/"}>{fr ? "Confidentialité" : "Privacy"}</a></li>
+      </ul>
       <p class="small">{copy.disclosure}</p>
       <p class="small">© {new Date().getFullYear()} {site.owner} · Fin Ventures AI</p>
     </div>

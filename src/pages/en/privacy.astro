@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const lang = 'en' as const;
+---
+<BaseLayout
+  lang={lang}
+  title="Privacy policy"
+  description="How Fin Ventures AI handles personal information on its site and email list — observed practices only, not a legal guarantee."
+  pathWithoutLang="/privacy/"
+  altPathWithoutLang="/confidentialite/"
+>
+  <article class="prose">
+    <h1>Privacy policy</h1>
+    <p>This text describes <strong>practices observed</strong> as of 18 November 2026 (America/Toronto). It is <strong>not</strong> legal advice and <strong>not</strong> a certification of compliance with Québec’s Law 25, Canada’s CASL, or any other law.</p>
+
+    <h2>1. Who we are</h2>
+    <p><strong>Fin Ventures AI</strong> publishes reviews and comparisons of email, sales-funnel and AI tools.</p>
+    <ul>
+      <li><strong>Site operator (as shown publicly):</strong> Pierre Bernier</li>
+      <li><strong>Sites covered:</strong>
+        <ul>
+          <li>Canonical: <a href="https://finventures-ai.github.io">https://finventures-ai.github.io</a></li>
+          <li>Mirror: <a href="https://finventures-ai.pages.dev">https://finventures-ai.pages.dev</a></li>
+        </ul>
+      </li>
+      <li><strong>Contact email:</strong> fin.ventures.ai@gmail.com</li>
+      <li><strong>Public mailing address (CASL — PO Box only, never a home address):</strong> Fin Ventures AI, 520 Fort-St-Louis Blvd, PO Box 8010, Boucherville, QC J4B 1S0, Canada</li>
+    </ul>
+    <p>Exact legal-entity wording (Registraire form, NEQ, full corporate name) is <strong>not invented</strong> here.</p>
+
+    <h2>2. Scope</h2>
+    <p>This policy covers:</p>
+    <ul>
+      <li>visiting the Fin Ventures AI site;</li>
+      <li>voluntarily joining the newsletter via the embedded Systeme.io forms;</li>
+      <li>downloading the free PDF guides offered on the site;</li>
+      <li>messages you send to our contact email.</li>
+    </ul>
+    <p>It does <strong>not</strong> cover the privacy practices of third-party brands reached through our affiliate <code>/go/…</code> links once you leave our site.</p>
+
+    <h2>3. Information we collect (observed)</h2>
+    <h3>3.1 Newsletter (Systeme.io)</h3>
+    <p>The FR and EN home pages embed a Systeme.io form (remote scripts from <code>fin-ventures-ai.systeme.io</code>). Documented facts:</p>
+    <ul>
+      <li><strong>FR</strong> form (Systeme.io page <code>46462266</code>) and <strong>EN</strong> form (page <code>46462543</code>);</li>
+      <li>a <strong>required CASL consent checkbox</strong> before signup;</li>
+      <li>the studio PO Box shown with the form;</li>
+      <li>after submit, redirect to a studio Systeme.io page;</li>
+      <li>the studio’s Systeme.io free plan is the approved email-list platform.</li>
+    </ul>
+    <p><strong>Typical signup data:</strong> email address (and any other field actually shown on the form at signup time). We do <strong>not</strong> invent an unverified field list in this source.</p>
+    <p>No commercial newsletter sending is active until internal conditions are met (valid sender, Law 25 assessment, explicit owner approval).</p>
+
+    <h3>3.2 PDF guides</h3>
+    <p>Magnet links offer a <strong>direct PDF download</strong> (<code>/downloads/…</code>). That download path does <strong>not</strong> itself require an email in the current site component. Newsletter signup remains a <strong>separate</strong> Systeme.io form action.</p>
+
+    <h3>3.3 Contact email</h3>
+    <p>If you email fin.ventures.ai@gmail.com, we receive your message content and ordinary email metadata (address, subject, timestamps, etc.).</p>
+
+    <h3>3.4 Audience measurement (Google Analytics 4) and cookies</h3>
+    <p>Google Analytics measures this site’s audience only if you accept. No analytics cookies are set before that choice, and advertising stays off.</p>
+    <p>The “Cookie choice” banner (Consent Mode v2) does not request the analytics script <code>gtag.js</code> (measurement ID <code>G-41P5VTBDF0</code>) until you choose “Accept”. Quebec Law 25: no tracking before consent. After accept, ad storage, ad user data and ad personalization stay denied.</p>
+    <p><strong>Ownership-verification</strong> meta tags are present (Google Search Console, Pinterest). That is <strong>not</strong> a claim that advertising tooling is running.</p>
+    <p>We do <strong>not</strong> claim other studio-owned advertising or analytics cookies. The remote Systeme.io script may involve that vendor’s cookies or similar technologies; those details belong to Systeme.io and are not invented here.</p>
+
+    <h2>4. Purposes</h2>
+    <table>
+      <thead>
+        <tr><th>Purpose</th><th>Practical basis (observed)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Send the newsletter / related guides, if and when sending is enabled</td><td>Express consent via the CASL checkbox on the form</td></tr>
+        <tr><td>Reply to a contact message</td><td>Your voluntary request</td></tr>
+        <tr><td>Serve the site and static files</td><td>Technical hosting operation</td></tr>
+        <tr><td>Measure audience (GA4), only after acceptance</td><td>“Accept” choice on the consent banner</td></tr>
+        <tr><td>Affiliate disclosure</td><td>Commercial transparency (<code>/go/</code> links)</td></tr>
+      </tbody>
+    </table>
+    <p>We do <strong>not</strong> describe any undocumented purpose (for example selling lists): none is evidenced.</p>
+
+    <h2>5. Processors / hosts (evidenced only)</h2>
+    <table>
+      <thead>
+        <tr><th>Provider</th><th>Observed role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Systeme.io</strong> (<code>systeme.io</code> / <code>fin-ventures-ai.systeme.io</code>)</td><td>Signup forms; studio email list / email tools (free plan)</td></tr>
+        <tr><td><strong>GitHub Pages</strong></td><td>Canonical site hosting</td></tr>
+        <tr><td><strong>Cloudflare Pages</strong></td><td>Site mirror</td></tr>
+        <tr><td><strong>Google Analytics 4</strong> (<code>G-41P5VTBDF0</code>)</td><td>Audience measurement only after consent; advertising stays off</td></tr>
+      </tbody>
+    </table>
+    <p>Affiliate <code>/go/…</code> clicks leave our site for the merchant’s site; their practices are their own.</p>
+    <p><strong>Not listed for lack of evidenced active use on this site:</strong> ad pixels, CRM outside Systeme.io, live payment gateways on this site.</p>
+
+    <h2>6. Retention</h2>
+    <p><strong>No numeric retention period is set</strong> in studio sources today.<br />
+    Until the owner decides otherwise:</p>
+    <ul>
+      <li>newsletter contacts remain in Systeme.io while the studio account and consent remain;</li>
+      <li>unsubscribe (Systeme.io native email mechanism) must be honoured without undue delay (CASL target: within 10 business days — to verify on the first approved test);</li>
+      <li>contact messages are kept as needed to handle the request, then per owner practice (to be formalised);</li>
+      <li>the analytics consent choice is stored in the browser’s local storage (<code>fv_cookie_consent</code>) until it is changed or cleared.</li>
+    </ul>
+
+    <h2>7. Location / transfers</h2>
+    <p>The studio is operated from <strong>Québec, Canada</strong>.<br />
+    Systeme.io, GitHub, Cloudflare and Google Analytics are cloud services that may process data outside Québec. <strong>Exact contractual locations, clauses and sub-processors are not invented here.</strong></p>
+
+    <h2>8. Your requests</h2>
+    <p>To access, correct or request deletion of information we hold via the list or studio contact, email <strong>fin.ventures.ai@gmail.com</strong> with your request.<br />
+    We will respond within a reasonable time. Exact statutory deadlines and the name of a privacy officer are <strong>not invented</strong> here.</p>
+
+    <h2>9. Children</h2>
+    <p>The site targets adult professionals / creators. We do not knowingly solicit children’s information.</p>
+
+    <h2>10. Changes</h2>
+    <p>Any published version will show an update date. This version is dated <strong>18 November 2026</strong>. It is based on the 9 November 2026 source text, updated to reflect the consent banner and Google Analytics 4 added to the site on 11 November 2026.</p>
+
+    <h2>11. Contact</h2>
+    <ul>
+      <li>Email: fin.ventures.ai@gmail.com</li>
+      <li>Mail: Fin Ventures AI, 520 Fort-St-Louis Blvd, PO Box 8010, Boucherville, QC J4B 1S0, Canada</li>
+    </ul>
+    <p class="muted small">Last revised: 18 November 2026 (America/Toronto).</p>
+  </article>
+</BaseLayout>
