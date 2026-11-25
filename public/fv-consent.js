@@ -53,6 +53,39 @@
     }
   };
 
+  /* go_click and other events: sent only when analytics consent is granted and
+     gtag.js is loaded; otherwise nothing leaves the browser and cb runs at once.
+     cb (optional) runs after the hit is sent, or after 800 ms at most. */
+  window.fvTrack = function (name, params, cb) {
+    var sent = false;
+    function done() { if (sent) return; sent = true; if (cb) cb(); }
+    if (!window.__fvGaLoaded) { done(); return; }
+    var p = { transport_type: 'beacon', event_callback: done, event_timeout: 800 };
+    for (var k in params) if (Object.prototype.hasOwnProperty.call(params, k)) p[k] = params[k];
+    try { gtag('event', name, p); } catch (e) { done(); return; }
+    if (cb) setTimeout(done, 800);
+  };
+  /* Outbound affiliate clicks: /go/<brand>/ links and rel="sponsored" links. */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+    if (!a) return;
+    var u; try { u = new URL(a.href, location.href); } catch (e) { return; }
+    var brand = null;
+    if (u.host === location.host) {
+      var m = u.pathname.match(/^\/go\/([^\/]+)\/?/);
+      if (m) brand = m[1];
+    } else if (/(^|\s)sponsored(\s|$)/.test(a.getAttribute('rel') || '')) {
+      brand = u.hostname.replace(/^www\./, '');
+    }
+    if (!brand) return;
+    window.fvTrack('go_click', {
+      brand: brand,
+      lang: document.documentElement.getAttribute('lang') || 'fr',
+      page_location: location.href,
+      go_source: 'link_click'
+    });
+  }, true);
+
   var existing = null;
   try { existing = localStorage.getItem(KEY); } catch (e) {}
   if (existing === 'granted') {

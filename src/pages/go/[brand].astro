@@ -2,6 +2,7 @@
 import { goRedirects, tools } from '../../data/tools';
 import { site, t } from '../../data/i18n';
 import { siteConfig } from '../../data/siteConfig';
+import CookieConsent from '../../components/CookieConsent.astro';
 
 export function getStaticPaths() {
   const brands = Array.from(new Set([...tools.map((x) => x.brand), ...goRedirects.map((x) => x.brand)]));
@@ -21,12 +22,13 @@ const copy = t.fr;
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <CookieConsent part="boot" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex,follow" />
-    <meta http-equiv="refresh" content={`0;url=${target}`} />
+    <meta http-equiv="refresh" content={`1;url=${target}`} />
     <link rel="canonical" href={target} />
     <title>{tool.name.fr} — {site.name}</title>
-    <script define:vars={{ target, isAff }}>
+    <script define:vars={{ target, isAff, brand }}>
       let dest = target;
       try {
         if (isAff && document.referrer) {
@@ -37,7 +39,12 @@ const copy = t.fr;
           }
         }
       } catch (e) {}
-      location.replace(dest);
+      let lang = 'fr';
+      try { if (document.referrer) { const p = new URL(document.referrer).pathname; if (p.startsWith('/en/')) lang = 'en'; } } catch (e) {}
+      let gone = false;
+      const go = () => { if (gone) return; gone = true; location.replace(dest); };
+      if (window.fvTrack) window.fvTrack('go_click', { brand: brand, lang: lang, page_location: location.href, go_source: 'go_page' }, go);
+      else go();
     </script>
   </head>
   <body style="font-family:system-ui,sans-serif;background:#0b1220;color:#e8eefc;max-width:640px;margin:3rem auto;padding:0 1rem;line-height:1.5">
