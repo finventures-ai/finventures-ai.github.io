@@ -28,7 +28,7 @@ needs_verification:
 facts_recorded: "2026-11-09 (content/tools/functions-table-10.md); 2026-11-05 (existing Systeme.io vs ClickFunnels article)"
 ---
 
-*Disclosure: Fin Ventures AI may apply to the ClickFunnels and GoHighLevel affiliate programs, but has no active affiliate link with either today; links to them go straight to the vendors. We are an affiliate of Systeme.io, mentioned below as a $0 alternative; if you sign up through /go/systemeio/ we may earn a commission at no cost to you. Prices and limits come from official pricing pages as recorded in our tool table on November 9, 2026. Amounts in US dollars as displayed. We did not hands-on test either tool. No result is guaranteed.*
+*Disclosure: Fin Ventures AI is an affiliate of ClickFunnels and GoHighLevel: if you sign up through our /go/clickfunnels/ or /go/gohighlevel/ links we may earn a commission at no cost to you. On this page, links to them go straight to the vendors. We are an affiliate of Systeme.io, mentioned below as a $0 alternative; if you sign up through /go/systemeio/ we may earn a commission at no cost to you. Prices and limits come from official pricing pages as recorded in our tool table on November 9, 2026. Amounts in US dollars as displayed. We did not hands-on test either tool. No result is guaranteed.*
 
 ## Short answer
 

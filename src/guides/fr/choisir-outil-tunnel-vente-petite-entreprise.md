@@ -24,7 +24,7 @@ needs_verification:
 facts_recorded: "2026-11-09 (content/tools/functions-table-10.md); 2026-11-05 (content/SOURCES.md, article existant Systeme.io vs ClickFunnels)"
 ---
 
-*Divulgation : Fin Ventures AI est affilié à Systeme.io ; si vous vous inscrivez par notre lien /go/systemeio/, nous pouvons recevoir une commission, sans coût pour vous. Nous pourrions demander l'adhésion aux programmes d'affiliation de ClickFunnels et de GoHighLevel, mais nous n'avons aucun lien d'affiliation actif avec eux aujourd'hui ; leurs liens mènent directement au fournisseur. Prix et limites tirés des pages de prix officielles, tels que notés dans notre table d'outils le 9 novembre 2026. Montants en dollars US, tels qu'affichés. Nous n'avons pas testé ces outils à la main pour ce guide. Aucun résultat n'est garanti.*
+*Divulgation : Fin Ventures AI est affilié à Systeme.io ; si vous vous inscrivez par notre lien /go/systemeio/, nous pouvons recevoir une commission, sans coût pour vous. Nous sommes aussi affiliés à GoHighLevel et à ClickFunnels : si vous vous inscrivez par nos liens /go/gohighlevel/ ou /go/clickfunnels/, nous pouvons recevoir une commission, sans coût pour vous. Dans ce guide, leurs liens mènent directement au fournisseur. Prix et limites tirés des pages de prix officielles, tels que notés dans notre table d'outils le 9 novembre 2026. Montants en dollars US, tels qu'affichés. Nous n'avons pas testé ces outils à la main pour ce guide. Aucun résultat n'est garanti.*
 
 ## À qui s'adresse ce guide
 
